@@ -125,19 +125,27 @@ p {
 .casussen {
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
+    /* align-content: space-between; */
     justify-content: space-between;
+    /* column-gap: 2em;
+    row-gap: 2em; */
+    /* gap: 1em; */
 }
 
 .blok-casus {
-    width: 30%;
+    flex: 0 32%;
+    /* width: calc(100% / 3); */
+    width: calc((100% / 3) - (2em / 3));
+    /* width: 31.3%; */
+    /* flex-grow: ; */
+    /* flex-basis: calc(var(--modifier) * 999); */
     height: auto;
     padding-left: 2.5em;
     padding-right: 2.5em;
     padding-bottom: 2em;
     color: white;
-    margin-right: 2em;
-    margin-bottom: 2em;
+    /* margin-right: 2em; */
+    margin-bottom: 2%;
     background-color: #00257A;
     display: block;
 }
