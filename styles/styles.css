@@ -6,6 +6,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     padding: 4em;
     height: auto;
+    position: relative;
 }
 
 /*Fonts*/
@@ -16,6 +17,16 @@ h1 {
     color: #00257A;
     margin-top: 0;
     margin-bottom: 0.8em;
+}
+
+.h1-tweede-regel {
+    display: flex;
+    margin-bottom: -1em;
+    /* font-weight: normal; */
+    /* font-size: 3.75em; */
+    /* color: white; */
+    /* margin-top: 0;
+    margin-bottom: 0.8em; */
 }
 
 h2 {
@@ -49,6 +60,7 @@ h2 {
 
 p {
     font-size: 1.25em;
+    line-height: 1.65em;
 }
 
 .blok-casus p:first-of-type {
@@ -119,32 +131,50 @@ p {
     bottom: 4em;
 }
 
+.stop {
+    position: absolute;
+    text-decoration: none;
+    color: #919191;
+    font-size: normal;
+    margin: 0;
+    top: 4em;
+    right: 4em;
+}
+
+.terug-wit {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    font-size: normal;
+    margin: 0;
+    bottom: 4em;
+}
+
+.stop-wit {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    font-size: normal;
+    margin: 0;
+    top: 4em;
+    right: 4em;
+}
 
 /*Casussen-page*/
 
 .casussen {
     display: flex;
     flex-wrap: wrap;
-    /* align-content: space-between; */
     justify-content: space-between;
-    /* column-gap: 2em;
-    row-gap: 2em; */
-    /* gap: 1em; */
 }
 
 .blok-casus {
     flex: 0 32%;
-    /* width: calc(100% / 3); */
-    width: calc((100% / 3) - (2em / 3));
-    /* width: 31.3%; */
-    /* flex-grow: ; */
-    /* flex-basis: calc(var(--modifier) * 999); */
     height: auto;
     padding-left: 2.5em;
     padding-right: 2.5em;
     padding-bottom: 2em;
     color: white;
-    /* margin-right: 2em; */
     margin-bottom: 2%;
     background-color: #00257A;
     display: block;
@@ -161,15 +191,18 @@ p {
 
 .blok-casus:nth-of-type(4) {
     background-color: #69BE28;
+    margin-bottom: 0;
 }
 
 .blok-casus:nth-of-type(5) {
-    background-color: #00257A; 
+    background-color: #00257A;
+    margin-bottom: 0; 
 }
 
 .blok-casus:nth-of-type(6) {
     margin-right: 0;
     background-color: #0066a1;
+    margin-bottom: 0;
 }
 
 .blok-casus > img {
@@ -199,15 +232,20 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* flex: 1 19%; */
 }
 
-.casus-bevestigen .blok-casus {
+.casus-bevestigen > .blok-casus {
     margin-bottom: 0;
     background-color: #0066a1;
+    flex-grow: 1;
+    flex: 0 32%;
 }
 
 .vraag {
-    width: 60%;
+    flex-grow: 2;
+    margin-left: 7%;
+    flex: 0 62%;
 }
 .vraag hr {
     width: 4em;
@@ -222,11 +260,13 @@ p {
 .info-pagina {
     background-color: #0066A1;
     color: white;
-    width: calc(100% + 10em);
-    height: calc(100% + 10em);
+    width: calc(100% + 9em);
+    height: calc(100% + 9em);
     padding: 4em;
-    margin-left: -5em;
-    margin-top: -5em;
+    margin-left: -4.5em;
+    margin-top: -4.5em;
+    margin-bottom: 0;
+    position: inherit;
 }
 
 .info-pagina h1 {
@@ -236,39 +276,56 @@ p {
 .casus-uitleg {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .casus-uitleg p {
-    width: 50%;
-    line-height: 1.750em;
+    line-height: 1.65em;
 }
 
 .casus-uitleg p:first-of-type {
-    padding-right: 1.5em;
     order: -1;
+    flex-grow: 2;
+    flex: 0 48%;
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
 }
 
 .casus-uitleg p:nth-of-type(2) {
-    padding-left: 1.5em;
-    order: 0;
+    margin-left: 2%;
+    order: -1;
+    flex-grow: 0;
+    flex: 0 48%;
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
 }
 
 .casus-uitleg p:nth-of-type(3) {
-    padding-left: 1.5em;
+    height: 100%;
+    margin-left: 2%;
     margin-bottom: 0;
-    order: 1;
+    order: 0;
+    flex-grow: 0;
+    flex: 0 48%;
+    margin-top: 0.5em;
 }
 
 #nel-gerard-blij {
     width: 27.813em;
-    margin-left: 5.938em;
-    order: 0;
-    margin-right: 2.5em;
+    height: 25em;
+    margin-left: 9.4%;
+    order: -1;
+    margin-bottom: -4em;
+    margin-top: 0.5em;
 }
 
 .casus-uitleg .button-1 {
-    order: 1;
-    
+    order: 2;
+    width: 15em;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 
