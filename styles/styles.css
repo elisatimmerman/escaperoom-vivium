@@ -122,42 +122,53 @@ p {
     font-size: bold;
 }
 
-.terug {
+/* .terug {
     position: absolute;
     text-decoration: none;
     color: #919191;
     font-size: normal;
     margin: 0;
     bottom: 4em;
+} */
+
+
+.terug {
+    position: absolute;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    font-size: normal;
+    margin: 0;
+    width: 4em;
+    height: 4em;
+    bottom: 4em;
+    background-color: red;
+    border-radius: 4em;
 }
+
+/* .stop {
+    position: absolute;
+    text-decoration: none;
+    color: #919191;
+    font-size: normal;
+    margin: 0;
+    bottom: 8em;
+} */
 
 .stop {
     position: absolute;
-    text-decoration: none;
-    color: #919191;
-    font-size: normal;
-    margin: 0;
-    top: 4em;
-    right: 4em;
-}
-
-.terug-wit {
-    position: absolute;
     color: white;
     text-decoration: none;
     font-size: normal;
     margin: 0;
-    bottom: 4em;
-}
-
-.stop-wit {
-    position: absolute;
-    color: white;
-    text-decoration: none;
-    font-size: normal;
-    margin: 0;
-    top: 4em;
-    right: 4em;
+    padding: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    bottom: 10em;
+    background-color: red;
+    border-radius: 10em;
 }
 
 /*Casussen-page*/
@@ -260,13 +271,18 @@ p {
 .info-pagina {
     background-color: #0066A1;
     color: white;
-    width: calc(100% + 9em);
-    height: calc(100% + 9em);
     padding: 4em;
     margin-left: -4.5em;
     margin-top: -4.5em;
-    margin-bottom: 0;
-    position: inherit;
+    margin-bottom: -4.5em;
+
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    height: 100vh;
+    
+    left: 50%;
+    background-position: bottom right;
 }
 
 .info-pagina h1 {
@@ -311,12 +327,13 @@ p {
 }
 
 #nel-gerard-blij {
-    width: 27.813em;
-    height: 25em;
+    width: 27em;
     margin-left: 9.4%;
     order: -1;
     margin-bottom: -4em;
     margin-top: 0.5em;
+    margin-right: 1%;
+    bottom: 0;
 }
 
 .casus-uitleg .button-1 {
