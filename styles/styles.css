@@ -263,8 +263,21 @@ p {
     
 }
 
+#mainDiv {
+    display: inline-block;
+    min-width:33vw;
+    height:100vh;
+    background-color: white;
+}
+#backgroundBlock {
+    display: inline-block;
+}
 
-
-
+input[type="text"] {
+    height: 50px;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
 
 
