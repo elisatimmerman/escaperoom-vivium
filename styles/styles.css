@@ -271,6 +271,7 @@ p {
 }
 #backgroundBlock {
     display: inline-block;
+    word-wrap: break-word;
 }
 
 input[type="text"] {
@@ -280,4 +281,48 @@ input[type="text"] {
     border-radius: 10px;
   }
 
+  .speech-bubble {
+	position: relative;
+	background: #ffffff;
+	border-radius: .4em;
+}
 
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #ffffff;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+
+.antwoordBubbel{
+    width: 280px; 
+    height: 200px; 
+    border-radius: 10px; 
+    padding: 10px;
+    color: white;
+    position: relative;
+
+}
+
+.antwoordBubbel:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: red;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+  }
