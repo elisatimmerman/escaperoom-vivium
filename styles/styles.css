@@ -35,14 +35,17 @@ h1 {
 .h1-blauw {
     color: #00257A;
     vertical-align: middle;
-    margin-right: unset;
+    /* margin-right: unset; */
 }
 .h1-zee-groen {
     color: #009B74;
+    display: block;
+    text-align: left;
 }
 .h1-gras-groen {
     color: #69BE28;
-    display: flex;
+    display: block;
+    text-align: left;
 }
 .h1-driehoek-blauw {
     width: 1.563em;
@@ -76,10 +79,13 @@ h2 {
 }
 .h2-zee-groen {
     color: #009B74;
+    display: block;
+    text-align: left;
 }
 .h2-gras-groen {
     color: #69BE28;
-    display: flex;
+    display: block;
+    text-align: left;
 }
 .h2-driehoek-blauw {
     width: 1.563em;
@@ -203,12 +209,64 @@ p {
     border-radius: 10em;
 } */
 
+/*index.html*/
+.beginscherm img {
+    width: 12.813em;
+    position: absolute;
+    right: 4em;
+}
+.beginscherm a {
+    width: auto;
+    font-size: 3em;
+    color: #00257A;
+    text-decoration: none;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+/*Beginscherm en dood scherm*/
+.lijnen-kleuren {
+    position: absolute;
+    right: 0;
+    bottom: 4em;
+}
+
+.lijn-blauw {
+    width: 40vw;
+    border: 3px solid #00257A;
+    border-radius: 3em 0 0 3em;
+}
+
+.lijn-zee-groen {
+    width: 40vw;
+    border: 3px solid #009B74;
+    border-radius: 3em 0 0 3em;
+}
+
+.lijn-gras-groen {
+    width: 40vw;
+    border: 3px solid #69BE28;
+    border-radius: 3em 0 0 3em;
+}
+
+.lijn-lime-groen {
+    width: 40vw;
+    border: 3px solid #BED600;
+    border-radius: 3em 0 0 3em;
+    margin-bottom: 0;
+}
+
 /*Casussen-page*/
 
 .casussen {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 4em;
 }
 
 .blok-casus {
@@ -234,18 +292,15 @@ p {
 
 .blok-casus:nth-of-type(4) {
     background-color: #69BE28;
-    margin-bottom: 0;
 }
 
 .blok-casus:nth-of-type(5) {
-    background-color: #00257A;
-    margin-bottom: 0; 
+    background-color: #00257A; 
 }
 
 .blok-casus:nth-of-type(6) {
     margin-right: 0;
     background-color: #0066a1;
-    margin-bottom: 0;
 }
 
 .blok-casus > img {
@@ -261,6 +316,7 @@ p {
 .blok-casus > hr {
     width: 0.813em;
     margin: 0;
+    border: 2px solid white;
 }
 
 .blok-casus > p:nth-of-type(2) {
@@ -275,7 +331,6 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* flex: 1 19%; */
 }
 
 .casus-bevestigen > .blok-casus {
@@ -317,6 +372,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    justify-content: space-between;
 }
 
 .casus-uitleg p {
@@ -369,34 +425,40 @@ p {
     right: 0;
 }
 
+@media(max-width: 30em) {
+    body {
+        padding: 2em;
+    }
 
-/*dood scherm*/
-.lijnen-kleuren {
-    position: absolute;
-    right: 0;
-    bottom: 4em;
+    h1 {
+        margin-bottom: 0.1em;
+    }
+
+    .casussen {
+        margin-bottom: 2em;
+    }
+
+    .blok-casus {
+        flex: 0 100%;
+        margin-bottom: 5%;
+    }
+
+    .blok-casus:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .casus-bevestigen {
+        display: block;
+    }
+
+    .casus-bevestigen > .blok-casus {
+        flex: 100%;
+    }
 }
 
-.lijn-blauw {
-    width: 40vw;
-    border: 3px solid #00257A;
-}
+@media(min-width: 60em) {}
 
-.lijn-zee-groen {
-    width: 40vw;
-    border: 3px solid #009B74;
-}
 
-.lijn-gras-groen {
-    width: 40vw;
-    border: 3px solid #69BE28;
-}
-
-.lijn-lime-groen {
-    width: 40vw;
-    border: 3px solid #BED600;
-    margin-bottom: 0;
-}
 
 
     
