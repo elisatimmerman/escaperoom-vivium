@@ -4,6 +4,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
     padding: 4em;
     height: 100vh;
     margin: 0;
@@ -25,28 +26,33 @@ h1 {
     margin-bottom: -1em;
 }
 
-.h1-kleuren {
+.kleuren {
     font-size: 3.75em;
     color: #BED600;
     line-height: 1.125em;
     display: inline;
 }
 
-.h1-blauw {
+.blauw {
     color: #00257A;
     vertical-align: middle;
     /* margin-right: unset; */
 }
-.h1-zee-groen {
+.zee-groen {
     color: #009B74;
     display: block;
     text-align: left;
 }
-.h1-gras-groen {
+.gras-groen {
     color: #69BE28;
     display: block;
     text-align: left;
 }
+.driehoek-blauw {
+    width: 1.563em;
+    margin-right: 0.5em;
+}
+
 .h1-driehoek-blauw {
     width: 1.563em;
     margin-right: 0.5em;
@@ -67,31 +73,6 @@ h2 {
     margin: 0.5em 0 0.5em 0;
 }
 
-.h2-kleuren {
-    font-size: 3.75em;
-    color: #BED600;
-    line-height: 1.125em;
-    display: inline;
-}
-.h2-blauw {
-    color: #00257A;
-    vertical-align: middle;
-}
-.h2-zee-groen {
-    color: #009B74;
-    display: block;
-    text-align: left;
-}
-.h2-gras-groen {
-    color: #69BE28;
-    display: block;
-    text-align: left;
-}
-.h2-driehoek-blauw {
-    width: 1.563em;
-    margin-right: 0.5em;
-}
-
 p {
     font-size: 1.25em;
     line-height: 1.65em;
@@ -101,7 +82,7 @@ p {
     font-size: 0.813em;
 }
 
-.dood-scherm p {
+.info p {
     width: 25vw;
 }
 
@@ -109,6 +90,7 @@ p {
 
 .button-1 {
     width: 100%;
+    height: 2.5em;
     background-color: white;
     font-weight: bold;
     font-size: 1.125em;
@@ -116,25 +98,24 @@ p {
     padding: 0.5em;
     padding-left: 0;
     border-radius: 0.5em;
-    display: block;
+    display: flex;
     align-items: center;
+    vertical-align: middle;
+    margin: 0;
+    text-decoration: none;
+    color: black;
 }
 .button-1 img {
     width: 0.875em;
     margin-left: 1em;
     margin-right: 0.5em;
     vertical-align: middle;
-}
-.button-1 a {
-    vertical-align: middle;
-    margin: 0;
-    text-decoration: none;
-    color: black;
-    font-size: bold;
+    order: -1;
 }
 
 .button-2 {
     width: 15em;
+    height: 2.5em;
     background-color: white;
     border: 1px solid #00257A;
     font-weight: bold;
@@ -143,21 +124,45 @@ p {
     padding: 0.5em;
     padding-left: 0;
     border-radius: 0.5em;
-    display: block;
+    display: flex;
     align-items: center;
+    vertical-align: middle;
+    margin: 0;
+    text-decoration: none;
+    color: black;
 }
 .button-2 img {
     width: 0.875em;
     margin-left: 1em;
     margin-right: 0.5em;
     vertical-align: middle;
+    order: -1;
 }
-.button-2 a {
+
+.button-3 {
+    width: 100%;
+    height: 5em;
+    background-color: white;
+    border: 1px solid #00257A;
+    font-weight: bold;
+    font-size: 1.125em;
+    color: black;
+    padding: 1em;
+    padding-left: 0;
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
     vertical-align: middle;
-    margin: 0;
+    margin-top: 3em;
     text-decoration: none;
     color: black;
-    font-size: bold;
+}
+.button-3 img {
+    width: 2em;
+    margin-left: 1em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    order: -1;
 }
 
 .terug {
@@ -228,32 +233,32 @@ p {
     transform: translate(-50%, -50%)
 }
 
-/*Beginscherm en dood scherm*/
+/*Beginscherm*/
 .lijnen-kleuren {
     position: absolute;
     right: 0;
     bottom: 4em;
 }
 
-.lijn-blauw {
+.lijnen-kleuren > .blauw {
     width: 40vw;
     border: 3px solid #00257A;
     border-radius: 3em 0 0 3em;
 }
 
-.lijn-zee-groen {
+.lijnen-kleuren > .zee-groen {
     width: 40vw;
     border: 3px solid #009B74;
     border-radius: 3em 0 0 3em;
 }
 
-.lijn-gras-groen {
+.lijnen-kleuren > .gras-groen {
     width: 40vw;
     border: 3px solid #69BE28;
     border-radius: 3em 0 0 3em;
 }
 
-.lijn-lime-groen {
+.lijnen-kleuren > .lime-groen {
     width: 40vw;
     border: 3px solid #BED600;
     border-radius: 3em 0 0 3em;
@@ -331,18 +336,21 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* flex-direction: column;
+  justify-content: center; */
+    /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%); */
 }
 
 .casus-bevestigen > .blok-casus {
     margin-bottom: 0;
     background-color: #0066a1;
-    flex-grow: 1;
     flex: 0 32%;
 }
 
 .vraag {
-    flex-grow: 2;
-    margin-left: 7%;
+    margin-left: 6%;
     flex: 0 62%;
 }
 .vraag hr {
@@ -362,6 +370,7 @@ p {
     margin-left: -4em;
     margin-top: -4em;
     width: 100vw;
+    /* height: 100vh; */
 }
 
 .info-pagina h1 {
@@ -380,7 +389,7 @@ p {
 }
 
 .casus-uitleg p:first-of-type {
-    order: -1;
+    order: 0;
     flex-grow: 2;
     flex: 0 48%;
     margin-top: 2.5em;
@@ -389,7 +398,7 @@ p {
 
 .casus-uitleg p:nth-of-type(2) {
     margin-left: 2%;
-    order: -1;
+    order: 0;
     flex-grow: 0;
     flex: 0 48%;
     margin-top: 2.5em;
@@ -400,29 +409,49 @@ p {
     height: 100%;
     margin-left: 2%;
     margin-bottom: 0;
-    order: 0;
+    order: 2;
     flex-grow: 0;
     flex: 0 48%;
     margin-top: 0.5em;
 }
 
 #nel-gerard-blij {
-    width: 27em;
+    width: 25em;
+    height: 23em;
     margin-left: 9.4%;
-    order: -1;
-    margin-bottom: -4em;
-    margin-top: 0.5em;
-    margin-right: 1%;
-    bottom: 0;
+    order: 1;
+    margin-bottom: calc(-4em - 2.8em);
+    margin-top: 3.1em; 
 }
 
 .casus-uitleg .button-1 {
-    order: 2;
-    width: 15em;
-    margin-bottom: 0;
+    order: 3;
+    width: 20%;
+    margin-left: auto;
+}
+
+/*'slapend' scherm*/
+.slapend-scherm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hints-kader {
+    height: 100vh;
+    width: 35%;
+    color: white;
+    padding: 4em;
+    background-color: #00257A;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 0;
+    right: 0;   
+}
+
+.hint-scherm img {
+    width: 25em;
+    position: absolute;
+    top: 10em;
+    right: 16em;
 }
 
 @media(max-width: 30em) {
