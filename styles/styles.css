@@ -485,8 +485,187 @@ p {
     }
 }
 
+<<<<<<< HEAD
 @media(min-width: 60em) {}
 
+=======
+#mainDiv {
+    display: inline-block;
+    min-width:33vw;
+    height:100vh;
+    vertical-align: middle;
+    background-color: white;
+}
+#backgroundBlock {
+    vertical-align: middle;
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+input[type="text"] {
+    height: 50px;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  .speech-bubble {
+	position: relative;
+	background: #ffffff;
+	border-radius: .4em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #ffffff;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+
+.antwoordBubbel1{
+    width: 280px; 
+    height: 200px; 
+    border-radius: 10px; 
+    padding: 10px;
+    color: white;
+    background-color: #00257A;
+    position: relative;
+
+}
+
+.antwoordBubbel1:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #00257A;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+  }
+
+  .antwoordBubbel2{
+    width: 280px; 
+    height: 200px; 
+    border-radius: 10px; 
+    padding: 10px;
+    color: white;
+    background-color: #0066a1;
+    position: relative;
+
+}
+
+.antwoordBubbel2:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #0066a1;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+  }
+
+  .antwoordBubbel3{
+    width: 280px; 
+    height: 200px; 
+    border-radius: 10px; 
+    padding: 10px;
+    color: white;
+    background-color: #008b95;
+    position: relative;
+
+}
+
+.antwoordBubbel3:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #008b95;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+  }
+
+  .antwoordBubbel4{
+    width: 280px; 
+    height: 200px; 
+    border-radius: 10px; 
+    padding: 10px;
+    color: white;
+    background-color: #69BE28;
+    position: relative;
+
+}
+
+.antwoordBubbel4:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #69BE28;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+  }
+
+  
+  .antwoordBubbel5{
+    width: 280px; 
+    height: 200px; 
+    border-radius: 10px; 
+    padding: 10px;
+    background-color: white;
+    position: relative;
+
+}
+
+.toelichting{
+    width: 280px; 
+    height: 400px; 
+    border-radius: 10px; 
+    padding: 10px;
+    background-color: white;
+    position: relative;
+
+}
+
+
+.symtoom{
+    width: 280px; 
+    height: 100px; 
+    border-radius: 10px; 
+    padding: 10px;
+    background-color: white;
+    position: relative;
+
+}
+>>>>>>> stijn
 
 
 
@@ -495,4 +674,12 @@ p {
 
 
 
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+  }
 
+  .grid-item {
+    margin: 15px;
+  }

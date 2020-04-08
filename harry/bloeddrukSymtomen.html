@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <title>Escaperoom Vivium</title>
+</head>
+
+<body style="background-color:#69be28; margin: 0; padding: 0;">
+    <nav>
+        <a class="terug" href="../algemeen/casussen.html">Terug</a>
+    </nav>
+
+
+    
+        <div id="mainDiv">
+            <h2 class="h2-kleuren">
+                <img class="h1-driehoek-blauw" src="../images/koppen/driehoek-blauw.png" alt="driehoek blauw">
+                <span class="h2-blauw">Kunnen jullie</span><br>
+                <span class="h2-zee-groen">van een iemand</span> <br>
+                <span class="h2-gras-groen">de bloeddruk</span>
+                opmeten?</h2> <br>
+                
+                <div class="info">
+                    Als jullie de bloeddrukwaarden weten, dan kunnen jullie dat op dit scherm invullen.
+                </div>        
+            </div>
+        <div id="backgroundBlock" style="color: white;">
+            <h2>Bloeddruk student</h2>
+            <form>
+                <div style="display: inline-block">
+                    <b><label for="lblBovendruk">Bovendruk</label></b>
+                    <input type="text" id="txtBovendruk" value="160">
+                </div>
+                <div style="display: inline-block">
+                    <b><label for="lblOnderdruk">Onderdruk</label></b>
+                    <input type="text" id="txtOnderdruk" value="160">
+                </div>
+            </form>
+
+
+            <form action="/action_page.php">
+                <p>Wat voor bloeddruk is dit?</p>
+                <input type="radio" id="btnHoog" name="bloeddruk" value="hoog">
+                <label for="hoog">Hoge bloeddruk</label><br>
+                <input type="radio" id="btnNormaal" name="bloeddruk" value="normaal">
+                <label for="female">Normale bloeddruk</label><br>
+                <input type="radio" id="btnLaag" name="bloeddruk" value="laag">
+                <label for="other">Lage bloeddruk</label>
+            </form>
+            
+        </div>
+    
+
+
+    <script src="../script/escaperoom.vivium.js"></script>
+</body>
+
+</html>
