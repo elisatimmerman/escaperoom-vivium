@@ -4,8 +4,11 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
     padding: 4em;
-    height: auto;
+    height: 100vh;
+    margin: 0;
+    position: relative;
 }
 
 /*Fonts*/
@@ -18,47 +21,76 @@ h1 {
     margin-bottom: 0.8em;
 }
 
+.h1-tweede-regel {
+    display: flex;
+    margin-bottom: -1em;
+}
+
+.kleuren {
+    font-size: 3.75em;
+    color: #BED600;
+    line-height: 1.125em;
+    display: inline;
+}
+
+.blauw {
+    color: #00257A;
+    vertical-align: middle;
+    /* margin-right: unset; */
+}
+.zee-groen {
+    color: #009B74;
+    display: block;
+    text-align: left;
+}
+.gras-groen {
+    color: #69BE28;
+    display: block;
+    text-align: left;
+}
+.driehoek-blauw {
+    width: 1.563em;
+    margin-right: 0.5em;
+}
+
+.h1-driehoek-blauw {
+    width: 1.563em;
+    margin-right: 0.5em;
+}
+
+hr {
+    width: 4em;
+    border: 1px solid black;
+    border-radius: 1px;
+    margin: 0;
+    margin-top: 2.500em;
+    margin-bottom: 2.500em;
+}
+
 h2 {
     font-weight: 500;
     font-size: 1.875em;
     margin: 0.5em 0 0.5em 0;
 }
 
-.h2-kleuren {
-    font-size: 3.75em;
-    color: #BED600;
-    line-height: 1.125em;
-    display: inline;
-}
-.h2-blauw {
-    color: #00257A;
-    display: inline;
-    vertical-align: middle;
-}
-.h2-zee-groen {
-    color: #009B74;
-}
-.h2-gras-groen {
-    color: #69BE28;
-    display: flex;
-}
-.h2-driehoek-blauw {
-    width: 1.563em;
-    margin-right: 0.5em;
-}
-
 p {
     font-size: 1.25em;
+    line-height: 1.65em;
 }
 
 .blok-casus p:first-of-type {
     font-size: 0.813em;
 }
 
+.info p {
+    width: 25vw;
+}
+
 /*Buttons*/
 
 .button-1 {
     width: 100%;
+    height: 2.5em;
     background-color: white;
     font-weight: bold;
     font-size: 1.125em;
@@ -66,25 +98,24 @@ p {
     padding: 0.5em;
     padding-left: 0;
     border-radius: 0.5em;
-    display: block;
+    display: flex;
     align-items: center;
+    vertical-align: middle;
+    margin: 0;
+    text-decoration: none;
+    color: black;
 }
 .button-1 img {
     width: 0.875em;
     margin-left: 1em;
     margin-right: 0.5em;
     vertical-align: middle;
-}
-.button-1 a {
-    vertical-align: middle;
-    margin: 0;
-    text-decoration: none;
-    color: black;
-    font-size: bold;
+    order: -1;
 }
 
 .button-2 {
     width: 15em;
+    height: 2.5em;
     background-color: white;
     border: 1px solid #00257A;
     font-weight: bold;
@@ -93,21 +124,45 @@ p {
     padding: 0.5em;
     padding-left: 0;
     border-radius: 0.5em;
-    display: block;
+    display: flex;
     align-items: center;
+    vertical-align: middle;
+    margin: 0;
+    text-decoration: none;
+    color: black;
 }
 .button-2 img {
     width: 0.875em;
     margin-left: 1em;
     margin-right: 0.5em;
     vertical-align: middle;
+    order: -1;
 }
-.button-2 a {
+
+.button-3 {
+    width: 100%;
+    height: 5em;
+    background-color: white;
+    border: 1px solid #00257A;
+    font-weight: bold;
+    font-size: 1.125em;
+    color: black;
+    padding: 1em;
+    padding-left: 0;
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
     vertical-align: middle;
-    margin: 0;
+    margin-top: 3em;
     text-decoration: none;
     color: black;
-    font-size: bold;
+}
+.button-3 img {
+    width: 2em;
+    margin-left: 1em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    order: -1;
 }
 
 .terug {
@@ -120,24 +175,113 @@ p {
 }
 
 
+/* .terug {
+    position: absolute;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    font-size: normal;
+    margin: 0;
+    width: 4em;
+    height: 4em;
+    bottom: 4em;
+    background-color: red;
+    border-radius: 4em;
+} */
+
+.stop {
+    position: absolute;
+    text-decoration: none;
+    color: #919191;
+    font-size: normal;
+    margin: 0;
+    bottom: 8em;
+}
+
+/* .stop {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    font-size: normal;
+    margin: 0;
+    padding: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    bottom: 10em;
+    background-color: red;
+    border-radius: 10em;
+} */
+
+/*index.html*/
+.beginscherm img {
+    width: 12.813em;
+    position: absolute;
+    right: 4em;
+}
+.beginscherm a {
+    width: auto;
+    font-size: 3em;
+    color: #00257A;
+    text-decoration: none;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+/*Beginscherm*/
+.lijnen-kleuren {
+    position: absolute;
+    right: 0;
+    bottom: 4em;
+}
+
+.lijnen-kleuren > .blauw {
+    width: 40vw;
+    border: 3px solid #00257A;
+    border-radius: 3em 0 0 3em;
+}
+
+.lijnen-kleuren > .zee-groen {
+    width: 40vw;
+    border: 3px solid #009B74;
+    border-radius: 3em 0 0 3em;
+}
+
+.lijnen-kleuren > .gras-groen {
+    width: 40vw;
+    border: 3px solid #69BE28;
+    border-radius: 3em 0 0 3em;
+}
+
+.lijnen-kleuren > .lime-groen {
+    width: 40vw;
+    border: 3px solid #BED600;
+    border-radius: 3em 0 0 3em;
+    margin-bottom: 0;
+}
+
 /*Casussen-page*/
 
 .casussen {
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
     justify-content: space-between;
+    margin-bottom: 4em;
 }
 
 .blok-casus {
-    width: 30%;
+    flex: 0 32%;
     height: auto;
     padding-left: 2.5em;
     padding-right: 2.5em;
     padding-bottom: 2em;
     color: white;
-    margin-right: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 2%;
     background-color: #00257A;
     display: block;
 }
@@ -177,6 +321,7 @@ p {
 .blok-casus > hr {
     width: 0.813em;
     margin: 0;
+    border: 2px solid white;
 }
 
 .blok-casus > p:nth-of-type(2) {
@@ -191,15 +336,22 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* flex-direction: column;
+  justify-content: center; */
+    /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%); */
 }
 
-.casus-bevestigen .blok-casus {
+.casus-bevestigen > .blok-casus {
     margin-bottom: 0;
     background-color: #0066a1;
+    flex: 0 32%;
 }
 
 .vraag {
-    width: 60%;
+    margin-left: 6%;
+    flex: 0 62%;
 }
 .vraag hr {
     width: 4em;
@@ -214,11 +366,11 @@ p {
 .info-pagina {
     background-color: #0066A1;
     color: white;
-    width: calc(100% + 10em);
-    height: calc(100% + 10em);
     padding: 4em;
-    margin-left: -5em;
-    margin-top: -5em;
+    margin-left: -4em;
+    margin-top: -4em;
+    width: 100vw;
+    /* height: 100vh; */
 }
 
 .info-pagina h1 {
@@ -228,42 +380,118 @@ p {
 .casus-uitleg {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
 }
 
 .casus-uitleg p {
-    width: 50%;
-    line-height: 1.750em;
+    line-height: 1.65em;
 }
 
 .casus-uitleg p:first-of-type {
-    padding-right: 1.5em;
-    order: -1;
+    order: 0;
+    flex-grow: 2;
+    flex: 0 48%;
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
 }
 
 .casus-uitleg p:nth-of-type(2) {
-    padding-left: 1.5em;
+    margin-left: 2%;
     order: 0;
+    flex-grow: 0;
+    flex: 0 48%;
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
 }
 
 .casus-uitleg p:nth-of-type(3) {
-    padding-left: 1.5em;
+    height: 100%;
+    margin-left: 2%;
     margin-bottom: 0;
-    order: 1;
+    order: 2;
+    flex-grow: 0;
+    flex: 0 48%;
+    margin-top: 0.5em;
 }
 
 #nel-gerard-blij {
-    width: 27.813em;
-    margin-left: 5.938em;
-    order: 0;
-    margin-right: 2.5em;
+    width: 25em;
+    height: 23em;
+    margin-left: 9.4%;
+    order: 1;
+    margin-bottom: calc(-4em - 2.8em);
+    margin-top: 3.1em; 
 }
 
 .casus-uitleg .button-1 {
-    order: 1;
-    
+    order: 3;
+    width: 20%;
+    margin-left: auto;
 }
 
+/*'slapend' scherm*/
+.slapend-scherm {
+    display: flex;
+    justify-content: space-between;
+}
 
+.hints-kader {
+    height: 100vh;
+    width: 35%;
+    color: white;
+    padding: 4em;
+    background-color: #00257A;
+    position: absolute;
+    top: 0;
+    right: 0;   
+}
+
+.hint-scherm img {
+    width: 25em;
+    position: absolute;
+    top: 10em;
+    right: 16em;
+}
+
+@media(max-width: 30em) {
+    body {
+        padding: 2em;
+    }
+
+    h1 {
+        margin-bottom: 0.1em;
+    }
+
+    .casussen {
+        margin-bottom: 2em;
+    }
+
+    .blok-casus {
+        flex: 0 100%;
+        margin-bottom: 5%;
+    }
+
+    .blok-casus:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .casus-bevestigen {
+        display: block;
+    }
+
+    .casus-bevestigen > .blok-casus {
+        flex: 100%;
+    }
+}
+
+@media(min-width: 60em) {}
+
+
+
+
+    
+    
 
 
 
