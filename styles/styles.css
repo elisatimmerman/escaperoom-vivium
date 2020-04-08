@@ -141,7 +141,7 @@ p {
 
 .button-3 {
     width: 100%;
-    height: 5em;
+    height: 8em;
     background-color: white;
     border: 1px solid #00257A;
     font-weight: bold;
@@ -153,7 +153,6 @@ p {
     display: flex;
     align-items: center;
     vertical-align: middle;
-    margin-top: 3em;
     text-decoration: none;
     color: black;
 }
@@ -174,10 +173,29 @@ p {
     bottom: 4em;
 }
 
+
+.terug-wit {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    font-size: normal;
+    margin: 0;
+    bottom: 4em;
+}
+
 .stop {
     position: absolute;
     text-decoration: none;
     color: #919191;
+    font-size: normal;
+    margin: 0;
+    bottom: 8em;
+}
+
+.stop-wit {
+    position: absolute;
+    text-decoration: none;
+    color: white;
     font-size: normal;
     margin: 0;
     bottom: 8em;
@@ -305,11 +323,10 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* flex-direction: column;
-  justify-content: center; */
-    /* position: absolute;
+    width: 90%;
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%); */
+    transform: translateY(-50%);
 }
 
 .casus-bevestigen > .blok-casus {
@@ -413,7 +430,14 @@ p {
     background-color: #00257A;
     position: absolute;
     top: 0;
-    right: 0;   
+    right: 0; 
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.hints-kader h2 {
+    width: 100%;
 }
 
 .hint-scherm img {
