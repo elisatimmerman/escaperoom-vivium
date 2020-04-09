@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <title>Escaperoom Vivium</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <title>Escaperoom Vivium</title>
+</head>
+
+<body>
+        <div id="mainDiv" class="groene-achtergrond">
+            <nav>
+                <a class="terug-wit" href="../algemeen/casussen.html">Terug</a>
+            </nav>
+            <div class="witte-header">Bloeddruk student</div>
+            <form>
+                <div>
+                    <b><label for="lblBovendruk" class="witte-subheader">Bovendruk</label></b>
+                    <input type="text" id="txtBovendruk" placeholder="Bijvoorbeeld 160">
+                </div>
+                <div>
+                    <b><label for="lblOnderdruk"  class="witte-subheader">Onderdruk</label></b>
+                    <input type="text" id="txtOnderdruk" placeholder="Bijvoorbeeld 160">
+                </div>
+            </form>
+
+
+            <form class="bloeddruk-vraag" action="/action_page.php">
+                <p class="witte-header">Wat voor bloeddruk is dit?</p>
+                <input type="radio" id="btnHoog" name="bloeddruk" value="hoog">
+                <label for="btnHoog">Hoge bloeddruk</label><br>
+                <input type="radio" id="btnNormaal" name="bloeddruk" value="normaal">
+                <label for="btnNormaal">Normale bloeddruk</label><br>
+                <input type="radio" id="btnLaag" name="bloeddruk" value="laag">
+                <label for="btnLaag">Lage bloeddruk</label>
+            </form>
+
+        </div>
+        <div id="backgroundBlock">
+            <header>
+                <img class="h1-driehoek-blauw" src="../images/koppen/driehoek-blauw.png" alt="driehoek blauw">
+                <h1 class="kleuren"><span class="blauw">Zijn de</span> 
+                    <span class="zee-groen">bloeddrukwaarden</span> 
+                    <span class="gras-groen">hoog, normaal</span> 
+                    of laag?
+                </h1>      
+            </header>
+
+                <div class="grid-container">
+                    <div class="toelichting">
+                        Het antwoord wat jullie hebben gegeven is goed. De bloeddrukwaarden bepaalde waarden wanneer ze onder een hoge, normale of lage bloeddruk vallen. Hiernaast vind je die waarden.
+                    </div>
+        
+                    <div class="toelichting">
+                        <b>Hoog</b>
+                        <ul>
+                            <li>Bovendruk: 	&gt; 140</li>
+                            <li>Onderdruk: 	&gt; 90</li>
+                          </ul> 
+                        <b>Normaal</b>
+                        <ul>
+                            <li>Bovendruk: 110-140</li>
+                            <li>Onderdruk: 70-90</li>
+                          </ul> 
+                        <b>Laag</b>
+                        <ul>
+                            <li>Bovendruk: 	&lt; 110 </li>
+                            <li>Onderdruk: 	&lt; 70</li>
+                        </ul> 
+
+                    </div>
+                </div>
+
+                    <a class="button-2 bottom-right"  href=""> Ik begrijp het
+                        <img src="../images/knoppen/driehoek.png" alt="driehoek">
+                    </a>
+        </div>
+    
+
+
+
+    <script src="../script/escaperoom.vivium.js"></script>
+</body>
+
+</html>

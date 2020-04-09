@@ -478,28 +478,61 @@ p {
     }
 }
 
-<<<<<<< HEAD
 @media(min-width: 60em) {}
 
-=======
 #mainDiv {
     display: inline-block;
     min-width:33vw;
     height:100vh;
     vertical-align: middle;
-    background-color: white;
+    position: absolute;
+    left: 0; 
+    top: 0;
+    padding: 4em;
+
+
+    
 }
 #backgroundBlock {
-    vertical-align: middle;
-    display: inline-block;
+    text-align: left;
     word-wrap: break-word;
+    height: 100vh;
+    width: 60%;
+    padding: 4em;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.groene-achtergrond{
+    background-color: #69BE28 !important;
+    color: white;
+}
+
+.grasgroene-achtergrond{
+    background-color: #BED600 !important;
+    color: white !important;
+}
+
+.blauwe-achtergrond{
+    background-color: #00257A !important;
+    color: white !important;
+}
+
+.donkergroene-achtergrond{
+    background-color: #009B74 !important; 
+    color: white !important;
 }
 
 input[type="text"] {
-    height: 50px;
+    width: 253px;
     display: block;
     margin-bottom: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: Arial;
   }
 
   .speech-bubble {
@@ -524,14 +557,16 @@ input[type="text"] {
 }
 
 .antwoordBubbel1{
-    width: 280px; 
-    height: 200px; 
+    width: 283px; 
+    height: 290px; 
     border-radius: 10px; 
-    padding: 10px;
+    padding: 32px;
     color: white;
-    background-color: #00257A;
     position: relative;
-
+    font-size: 20px;
+    font-family: Arial;
+    background-color: #00257A;
+    text-decoration: none
 }
 
 .antwoordBubbel1:after {
@@ -546,18 +581,21 @@ input[type="text"] {
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -10px;
-	margin-bottom: -20px;
+    margin-bottom: -20px;
+    
   }
 
   .antwoordBubbel2{
-    width: 280px; 
-    height: 200px; 
+    width: 283px; 
+    height: 290px; 
     border-radius: 10px; 
-    padding: 10px;
+    padding: 32px;
     color: white;
-    background-color: #0066a1;
     position: relative;
-
+    font-size: 20px;
+    font-family: Arial;
+    background-color: #0066a1;
+    text-decoration: none
 }
 
 .antwoordBubbel2:after {
@@ -576,14 +614,16 @@ input[type="text"] {
   }
 
   .antwoordBubbel3{
-    width: 280px; 
-    height: 200px; 
+    width: 283px; 
+    height: 290px; 
     border-radius: 10px; 
-    padding: 10px;
+    padding: 32px;
     color: white;
-    background-color: #008b95;
     position: relative;
-
+    font-size: 20px;
+    font-family: Arial;
+    background-color: #008b95;
+    text-decoration: none
 }
 
 .antwoordBubbel3:after {
@@ -602,14 +642,16 @@ input[type="text"] {
   }
 
   .antwoordBubbel4{
-    width: 280px; 
-    height: 200px; 
+    width: 283px; 
+    height: 290px; 
     border-radius: 10px; 
-    padding: 10px;
+    padding: 32px;
     color: white;
-    background-color: #69BE28;
     position: relative;
-
+    font-size: 20px;
+    font-family: Arial;
+    background-color: #69BE28;
+    text-decoration: none
 }
 
 .antwoordBubbel4:after {
@@ -629,14 +671,34 @@ input[type="text"] {
 
   
   .antwoordBubbel5{
-    width: 280px; 
-    height: 200px; 
+    width: 283px; 
+    height: 290px; 
     border-radius: 10px; 
-    padding: 10px;
-    background-color: white;
+    padding: 32px;
     position: relative;
+    font-size: 20px;
+    font-family: Arial;
+    background-color: white;
+    color: black;
 
 }
+
+
+.antwoordBubbel5:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: white;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+  }
+
 
 .toelichting{
     width: 280px; 
@@ -658,12 +720,26 @@ input[type="text"] {
     position: relative;
 
 }
->>>>>>> stijn
 
 
+.witte-header{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+}
 
+.witte-subheader{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
     
-    
+.vraag{
+    display: inline-block;
+}
 
 
 
@@ -676,3 +752,92 @@ input[type="text"] {
   .grid-item {
     margin: 15px;
   }
+
+  .bloeddruk-vraag {
+    margin: 10px;
+    
+  }
+  
+  .bloeddruk-vraag input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+  
+  .bloeddruk-vraag label {
+
+      display: inline-block;
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      margin: 10px;
+      width: 252px;
+      font-family: Arial;
+      font-size: 20px;
+      border: 2px solid #707070;
+      border-radius: 10px;
+  }
+  
+  .bloeddruk-vraag label:hover {
+    background-color: #A7C1FF;
+  }
+  
+  
+  .bloeddruk-vraag input[type="radio"]:checked + label {
+      background-color: #00257A;
+      color: white;
+  }
+  
+
+  #portret-klein{
+      width: 222px;
+      margin-left: 150px; 
+      position: absolute; 
+      bottom: 0; 
+      left: 0;
+  }
+
+  #portret-groot{
+    height: 80vh;
+    margin-left: 10vw; 
+    bottom: 0; 
+    left: 0;
+    position: absolute;
+}
+
+  .bottom-right{
+    bottom: 0; 
+    right: 0; 
+    position: absolute;
+    margin: 4em;
+  }
+
+  .full-background{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100vw;
+      height: 100vh;
+
+      background-color: #009B74;
+  }
+
+.bloeddruk-antwoord{
+    width: 252px;
+    height: 38px;
+    font-size: 20px;
+    font-family: Arial;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    padding-left: 1em;
+    margin: 10px;
+    line-height: 40px;
+}
+
+.aligner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
