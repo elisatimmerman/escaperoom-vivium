@@ -8,49 +8,54 @@
     <title>Escaperoom Vivium</title>
 </head>
 
-<body style="background-color:#69be28; margin: 0; padding: 0;">
+<body>
     <nav>
         <a class="terug" href="../algemeen/casussen.html">Terug</a>
     </nav>
-
-
-    
         <div id="mainDiv">
-            <h2 class="h2-kleuren">
+            <header>
                 <img class="h1-driehoek-blauw" src="../images/koppen/driehoek-blauw.png" alt="driehoek blauw">
-                <span class="h2-blauw">Kunnen jullie</span><br>
-                <span class="h2-zee-groen">van een iemand</span> <br>
-                <span class="h2-gras-groen">de bloeddruk</span>
-                opmeten?</h2> <br>
-                
-                <div class="info">
-                    Als jullie de bloeddrukwaarden weten, dan kunnen jullie dat op dit scherm invullen.
-                </div>        
-            </div>
-        <div id="backgroundBlock" style="color: white;">
-            <h2>Bloeddruk student</h2>
-            <form>
-                <div style="display: inline-block">
-                    <b><label for="lblBovendruk">Bovendruk</label></b>
-                    <input type="text" id="txtBovendruk" value="160">
-                </div>
-                <div style="display: inline-block">
-                    <b><label for="lblOnderdruk">Onderdruk</label></b>
-                    <input type="text" id="txtOnderdruk" value="160">
-                </div>
-            </form>
-
-
-            <form action="/action_page.php">
-                <p>Wat voor bloeddruk is dit?</p>
-                <input type="radio" id="btnHoog" name="bloeddruk" value="hoog">
-                <label for="hoog">Hoge bloeddruk</label><br>
-                <input type="radio" id="btnNormaal" name="bloeddruk" value="normaal">
-                <label for="female">Normale bloeddruk</label><br>
-                <input type="radio" id="btnLaag" name="bloeddruk" value="laag">
-                <label for="other">Lage bloeddruk</label>
-            </form>
+                <h1 class="kleuren"><span class="blauw">Kunnen jullie</span> 
+                    <span class="zee-groen">van één iemand</span> 
+                    <span class="gras-groen">de bloeddruk</span> 
+                    opmeten?
+                </h1>      
+                <hr>
+            </header>
             
+            <div class="info">
+                <p>Als jullie de bloeddrukwaarden weten, <br>
+                    kunnen jullie dat in dit scherm invullen.</p>
+            </div>  
+        </div>
+
+
+        <div id="backgroundBlock" class="groene-achtergrond">
+            <div class="witte-header">Bloeddruk student</div>
+            <form class="grid-container">
+                <div>
+                    <b><label for="lblBovendruk" class="witte-subheader">Bovendruk</label></b>
+                    <input type="text" id="txtBovendruk" placeholder="Bijvoorbeeld 160">
+                </div>
+                <div>
+                    <b><label for="lblOnderdruk"  class="witte-subheader">Onderdruk</label></b>
+                    <input type="text" id="txtOnderdruk" placeholder="Bijvoorbeeld 160">
+                </div>
+            </form>
+
+
+            <form class="bloeddruk-vraag" action="/action_page.php">
+                <p class="witte-header">Wat voor bloeddruk is dit?</p>
+                <input type="radio" id="btnHoog" name="bloeddruk" value="hoog">
+                <label for="btnHoog">Hoge bloeddruk</label><br>
+                <input type="radio" id="btnNormaal" name="bloeddruk" value="normaal">
+                <label for="btnNormaal">Normale bloeddruk</label><br>
+                <input type="radio" id="btnLaag" name="bloeddruk" value="laag">
+                <label for="btnLaag">Lage bloeddruk</label>
+            </form>
+            <a class="button-2 bottom-right"  href="./bloeddrukToelichting.html"> Stuur de gegevens in
+                <img src="../images/knoppen/driehoek.png" alt="driehoek">
+            </a>
         </div>
     
 
