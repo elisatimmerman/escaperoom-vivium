@@ -22,29 +22,36 @@
 <body>
         <div id="mainDiv" class="groene-achtergrond">
             <nav>
-                <a class="terug-wit" href="../algemeen/casussen.html">Terug</a>
-            </nav>
-            <div class="witte-header">Bloeddruk student</div>
+                <a class="terug-wit" href="bevestigen.casus.html">Terug</a>
+                <a class="stop-wit" href="../index.html">Stop</a>
+            </nav> 
+            <h2>Bloeddruk student</h2>
             <form>
-                <div>
-                    <b><label for="lblBovendruk" class="witte-subheader">Bovendruk</label></b>
+                <div class="antwoord-bovendruk">
+                    <label for="lblBovendruk" class="witte-subheader">Bovendruk</label>
                     <input type="text" id="txtBovendruk" placeholder="Bijvoorbeeld 160">
                 </div>
-                <div>
-                    <b><label for="lblOnderdruk"  class="witte-subheader">Onderdruk</label></b>
+                <div class="antwoord-onderdruk">
+                    <label for="lblOnderdruk"  class="witte-subheader">Onderdruk</label>
                     <input type="text" id="txtOnderdruk" placeholder="Bijvoorbeeld 160">
                 </div>
             </form>
 
 
             <form class="bloeddruk-vraag" action="/action_page.php">
-                <p class="witte-header">Wat voor bloeddruk is dit?</p>
+                <h2>Wat voor bloeddruk is dit?</h2>
                 <input type="radio" id="btnHoog" name="bloeddruk" value="hoog">
-                <label for="btnHoog">Hoge bloeddruk</label><br>
-                <input type="radio" id="btnNormaal" name="bloeddruk" value="normaal">
-                <label for="btnNormaal">Normale bloeddruk</label><br>
-                <input type="radio" id="btnLaag" name="bloeddruk" value="laag">
-                <label for="btnLaag">Lage bloeddruk</label>
+                    <label for="btnHoog">Hoge bloeddruk
+                        <img src="../images/knoppen/driehoek.png" alt="driehoek">
+                    </label>
+                    <input type="radio" id="btnNormaal" name="bloeddruk" value="normaal">
+                    <label for="btnNormaal">Normale bloeddruk
+                        <img src="../images/knoppen/driehoek.png" alt="driehoek">
+                    </label>
+                    <input type="radio" id="btnLaag" name="bloeddruk" value="laag">
+                    <label for="btnLaag">Lage bloeddruk
+                        <img src="../images/knoppen/driehoek.png" alt="driehoek">
+                    </label>
             </form>
 
         </div>
@@ -60,26 +67,23 @@
 
                 <div class="grid-container">
                     <div class="toelichting">
-                        Het antwoord wat jullie hebben gegeven is goed. De bloeddrukwaarden bepaalde waarden wanneer ze onder een hoge, normale of lage bloeddruk vallen. Hiernaast vind je die waarden.
+                        <p>Het antwoord wat jullie hebben gegeven is goed. De bloeddruk hebben bepaalde waarden wanneer ze onder een hoge, normale of lage bloeddruk vallen. Hiernaast vind je die waarden.</p>
                     </div>
         
                     <div class="toelichting">
-                        <b>Hoog</b>
-                        <ul>
-                            <li>Bovendruk: 	&gt; 140</li>
-                            <li>Onderdruk: 	&gt; 90</li>
-                          </ul> 
-                        <b>Normaal</b>
-                        <ul>
-                            <li>Bovendruk: 110-140</li>
-                            <li>Onderdruk: 70-90</li>
-                          </ul> 
-                        <b>Laag</b>
-                        <ul>
-                            <li>Bovendruk: 	&lt; 110 </li>
-                            <li>Onderdruk: 	&lt; 70</li>
-                        </ul> 
+                        <dl>
+                            <dt>Hoog</dt>
+                            <dd>Bovendruk: 	&gt; 140</dd>
+                            <dd>Onderdruk: 	&gt; 90</dd>
+            
+                            <dt>Normaal</dt>
+                            <dd>Bovendruk: 110-140</dd>
+                            <dd>Onderdruk: 70-90</dd>
 
+                            <dt>Laag</dt>
+                            <dd>Bovendruk: 	&lt; 110</dd>
+                            <dd>Onderdruk: 	&lt; 70</dd>
+                        </dl>
                     </div>
                 </div>
 
