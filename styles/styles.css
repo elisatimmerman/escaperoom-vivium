@@ -11,6 +11,13 @@ body {
     position: relative;
 }
 
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
 /*Fonts*/
 
 h1 {
@@ -87,6 +94,10 @@ p {
 
 .info p {
     width: 25vw;
+}
+
+.info p:first-of-type {
+    margin-top: 0;
 }
 
 /*Buttons*/
@@ -1102,6 +1113,7 @@ input[type="text"]:last-of-type {
 
     .button-4 {
         width: 25vw;
+        font-size: 1em;
     }
 
     .uitleg .button-1 {
@@ -1126,6 +1138,8 @@ input[type="text"]:last-of-type {
 
     .antwoordBubbel5 {
         font-size: 1em;
+        width: 35vw;
+        right: 10vw;
     }
 
     .antwoordBubbel6 {
