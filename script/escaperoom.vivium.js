@@ -2,6 +2,10 @@
 /*eslint-env browser*/
 /*eslint 'no-console':0*/
 
+const TIMEOUT_DATE_NAME = "timeoutDate";
+const TIMEOUT_TARGET_PATH_NAME = "timeoutTargetPath";
+
+
 // var terug = document.querySelector('.back');
 
 // terug.setAttribute('href', document.referrer);
@@ -11,75 +15,28 @@
 //   return false;
 // }
 
-// var slapendScherm1 = document.getElementById('#slapendSchermEen')
-// var myWindowURL = "slapen-scherm-1";
-// var myWindowProperties  = "width=100vw,height=100vh";
-// var openWindow;
+window.onload = _ => {
+  let timeoutStorageItem = sessionStorage.getItem(TIMEOUT_DATE_NAME);
+  let targetPath = sessionStorage.getItem(TIMEOUT_TARGET_PATH_NAME);
+  if (!timeoutStorageItem || !targetPath) return;
 
-// setTimeout(function() {
-//     openWindow = window.open(myWindowURL, myWindowName, myWindowProperties); 
-// }, 5000);
+  let timeoutDate = new Date(timeoutStorageItem);
+  let timeout = timeoutDate.getTime() - new Date().getTime();
+  if (timeout < 0) return;
+  openWithTimeout(targetPath, timeout);
+};
 
-// setTimeout(function() { 
-//     openWindow.close() 
-// }, 10000);
+function openWithTimeout(path, timeout) {
+  setTimeout(_ => {
+    sessionStorage.removeItem(TIMEOUT_DATE_NAME);
+    sessionStorage.removeItem(TIMEOUT_TARGET_PATH_NAME);
+    window.location.href = path;
+  }, timeout)
+}
 
-// slapendScherm1.addEventListener("click", setTimeout);
-
-
-
-// function countdown() {
-
-//   var i = document.getElementById('slapendSchermEen');
-
-//   i.innerHTML = parseInt(i.innerHTML)-1;
-
-// if (parseInt(i.innerHTML)<=0) {
-
-// window.close();
-
-// }
-
-// }
-
-// setInterval(function(){ countdown(); },1000);
-
-
-
-
-
-// setTimeout(
-//   function ( )
-//   {
-//     self.close();
-//   }, 5000 );
-
-
-
-
-
-//   var openedWindow;
-
-// function openWindow() {
-//   openedWindow = window.open('slapen-scherm-1');
-//   setTimeout(closeOpenedWindow, 1000);
-// }
-
-var slapendSchermEen = document.getElementById('slapendSchermEen')
-
-
-setTimeout(function(){
-  window.location.href = 'meneer-kok-nagedacht.html';
-  console.log('test');
-  // return false;
-}, 2000)
-
-
-slapendSchermEen.addEventListener('click', setTimeout, false);
-
-
-
-// function leave() {
-//   window.location.href = 'meneer-kok-nagedacht.html';
-// }
-// slapenSchermEen.setTimeout('click', "leave()", 5000);
+function SetTimeoutToDisableScreen(targetPath, timeoutMs) {
+  // timeoutMs = 5 * 1000; 
+  let timeoutDate = new Date(new Date().getTime() + timeoutMs);
+  sessionStorage.setItem(TIMEOUT_DATE_NAME, timeoutDate);
+  sessionStorage.setItem(TIMEOUT_TARGET_PATH_NAME, targetPath);
+}
