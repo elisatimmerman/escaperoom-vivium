@@ -822,6 +822,38 @@ input[type="text"]:last-of-type {
     margin-top: 0;
 }
 
+.antwoordBubbelAntwoord {
+    width: 100%; 
+    height: 38vh;
+    border-radius: 10px;  
+    padding: 2em;
+    color: white;
+    /* font-size: 1.250em; */
+    /* line-height: 1.65em; */
+    position: relative;
+    background-color: #0066a1;
+    text-decoration: none;
+}
+
+.antwoordBubbelAntwoord:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #0066a1;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+  }
+
+  .antwoordBubbelAntwoord p {
+      margin-top: 0;
+  }
+
 .antwoord-uitleg {
     margin: 0;
 } 
@@ -1111,6 +1143,10 @@ input[type="text"]:last-of-type {
         font-size: 1em;
     }
 
+    .button-3 {
+        font-size: 1em;
+    }
+
     .button-4 {
         width: 25vw;
         font-size: 1em;
@@ -1224,7 +1260,7 @@ input[type="text"]:last-of-type {
 
 }
  
-@media (min-width: 70em) {
+@media (min-width: 80em) {
     h1 {
         font-size: 3.5em;
     }
@@ -1247,6 +1283,10 @@ input[type="text"]:last-of-type {
 
     .button-2 {
         width: 25vw;
+        font-size: 1.25em;
+    }
+
+    .button-3 {
         font-size: 1.25em;
     }
 
@@ -1309,16 +1349,6 @@ input[type="text"]:last-of-type {
         row-gap: 4%;
     }
 
-    /* .blok-casus {
-    padding: 1.5em; */
-    /*padding-top: 0;
-    } */
-
-    /* blok-casus > img {
-        width: calc(100% + 1.5em + 1.5em);
-        margin-left: -1.5em;
-    } */
-
   blok-casus p:first-of-type {
       font-size: 1.5em;
   }
@@ -1332,9 +1362,12 @@ input[type="text"]:last-of-type {
       height: 70vh;
   }
 
+  #portret-klein {
+      width: 12vw;
+  }
+
   #img-uitleg {
-      height: 40vh;
-      width: 20vw;
+      width: 18vw;
   }
 
 
@@ -1383,7 +1416,7 @@ input[type="text"]:last-of-type {
 
 } 
 
-@media (min-width: 90em) {
+@media (min-width: 110em) {   
     h1 {
         font-size: 4.5em;
     }
@@ -1399,6 +1432,10 @@ input[type="text"]:last-of-type {
     .kleuren {
         font-size: 4.5em;
     }
+
+    .h1-driehoek-blauw {
+        width: 1.5vw;
+    }
     
     .button-1 {
         font-size: 1.8em;
@@ -1406,6 +1443,10 @@ input[type="text"]:last-of-type {
 
     .button-2 {
         width: 25vw;
+        font-size: 1.8em;
+    }
+
+    .button-3 {
         font-size: 1.8em;
     }
 
@@ -1445,6 +1486,11 @@ input[type="text"]:last-of-type {
         font-size: 1.8em;
     }
 
+    .antwoordBubbel2 > p {
+        font-size: 1em;
+        margin-top: 0;
+    }
+
     .antwoordBubbel3 {
         font-size: 1.8em;
     }
@@ -1467,16 +1513,6 @@ input[type="text"]:last-of-type {
         column-gap: 2%;
         row-gap: 4%;
     }
-
-    /* .blok-casus {
-    padding: 1.5em; */
-    /*padding-top: 0;
-    } */
-
-    /* blok-casus > img {
-        width: calc(100% + 1.5em + 1.5em);
-        margin-left: -1.5em;
-    } */
 
   blok-casus p:first-of-type {
       font-size: 1.5em;
@@ -1540,4 +1576,4 @@ input[type="text"]:last-of-type {
       width: 45%;
   }
 
-} 
+}
