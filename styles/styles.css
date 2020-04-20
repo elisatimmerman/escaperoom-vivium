@@ -131,6 +131,11 @@ p {
     text-decoration: none;
     color: black;
 }
+
+.button-2:disabled{
+    opacity: 0.2;
+}
+
 .button-2 img {
     width: 0.875em;
     margin-left: 1em;
@@ -1037,6 +1042,8 @@ input[type="text"]:last-of-type {
     padding-left: 1em;
     margin: 10px;
     line-height: 40px;
+    border: none;
+
 }
 
 .aligner{
