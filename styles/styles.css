@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
@@ -13,9 +14,6 @@ body {
 
 html, body {
     width: 100vw;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
 }
 
 /*Fonts*/
@@ -333,7 +331,7 @@ p {
     grid-template-rows: auto;
     column-gap: 4%;
     row-gap: 4%;
-    margin-bottom: 4em;
+    /* padding-bottom: 4em; */
 }
 
 .blok-casus {
@@ -357,21 +355,23 @@ p {
 
 .blok-casus:nth-of-type(4) {
     background-color: #69BE28;
+    margin-bottom: 4em;
 }
 
 .blok-casus:nth-of-type(5) {
     background-color: #00257A; 
+    margin-bottom: 4em;
 }
 
 .blok-casus:nth-of-type(6) {
     margin-right: 0;
     background-color: #0066a1;
+    margin-bottom: 4em;
 }
 
 .blok-casus > img {
     display: block;
     width: calc(100% + 2.5em + 2.5em);
-    height: 100%;
     margin-left: -2.5em;
     background-color: #E0DED8;
 }
@@ -384,7 +384,7 @@ p {
 }
 
 .blok-casus > p:nth-of-type(2) {
-    width: 100%;
+    width: 80%;
     line-height: 1.3em;
     margin-bottom: 10%;
 }
@@ -432,6 +432,7 @@ p {
     margin-top: -4em;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 .info-pagina h1 {
@@ -828,8 +829,6 @@ input[type="text"]:last-of-type {
     border-radius: 10px;  
     padding: 2em;
     color: white;
-    /* font-size: 1.250em; */
-    /* line-height: 1.65em; */
     position: relative;
     background-color: #0066a1;
     text-decoration: none;
@@ -1276,6 +1275,22 @@ input[type="text"]:last-of-type {
     .kleuren {
         font-size: 3.5em;
     }
+
+    .antwoord-textfield > label {
+        font-size: 1.25em;
+    }
+
+    .witte-subheader {
+        font-size: 1.25em
+    }
+
+    input[type="text"] {
+        font-size: 1.25em;
+    }
+
+    .blok-casus p:first-of-type {
+        font-size: 1em;
+    }
     
     .button-1 {
         font-size: 1.25em;
@@ -1340,6 +1355,10 @@ input[type="text"]:last-of-type {
 
     .antwoordBubbel6 {
         font-size: 1.25em;
+    }
+
+    .antwoordBubbel6:after {
+        margin-bottom: -0.5em;
     }
 
     .casussen {
@@ -1418,11 +1437,11 @@ input[type="text"]:last-of-type {
 
 @media (min-width: 110em) {   
     h1 {
-        font-size: 4.5em;
+        font-size: 4em;
     }
 
     h2 {
-        font-size: 4em;
+        font-size: 3.5em;
     }
 
     p {
@@ -1430,13 +1449,29 @@ input[type="text"]:last-of-type {
     }
 
     .kleuren {
-        font-size: 4.5em;
+        font-size: 4em;
     }
 
     .h1-driehoek-blauw {
         width: 1.5vw;
     }
+
+    .antwoord-textfield > label {
+        font-size: 1.8em;
+    }
+
+    .witte-subheader {
+        font-size: 1.8em
+    }
+
+    input[type="text"] {
+        font-size: 1.8em;
+    }
     
+    .blok-casus p:first-of-type {
+        font-size: 1.5em;
+    }
+
     .button-1 {
         font-size: 1.8em;
     }
