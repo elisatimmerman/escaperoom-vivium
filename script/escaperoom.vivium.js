@@ -6,15 +6,8 @@ const TIMEOUT_DATE_NAME = "timeoutDate";
 const TIMEOUT_TARGET_PATH_NAME = "timeoutTargetPath";
 
 
-// var terug = document.querySelector('.back');
-
-// terug.setAttribute('href', document.referrer);
-
-// terug.onclick = function() {
-//   history.back();
-//   return false;
-// }
-
+//Code voor 'slapend scherm'. De tijd moet bij de pagina voor het 'slapend scherm' aangegeven worden. Zie pagina 'meneer-kok-geruststellen'.
+//Evenals de pagina waarnaar het 'slapend scherm' gelinkt moet worden.
 window.onload = _ => {
   let timeoutStorageItem = sessionStorage.getItem(TIMEOUT_DATE_NAME);
   let targetPath = sessionStorage.getItem(TIMEOUT_TARGET_PATH_NAME);
@@ -35,8 +28,10 @@ function openWithTimeout(path, timeout) {
 }
 
 function SetTimeoutToDisableScreen(targetPath, timeoutMs) {
-  // timeoutMs = 5 * 1000; 
   let timeoutDate = new Date(new Date().getTime() + timeoutMs);
   sessionStorage.setItem(TIMEOUT_DATE_NAME, timeoutDate);
   sessionStorage.setItem(TIMEOUT_TARGET_PATH_NAME, targetPath);
 }
+
+
+
