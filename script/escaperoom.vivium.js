@@ -20,7 +20,7 @@ function bloeddrukSymtomsClicked(btnId){
     }
 }
 
-function confirmationButtonClicked(btnId) 
+function confirmationButtonClicked() 
 {
     window.location.href='./bloeddrukToelichting.html'
 }
@@ -35,6 +35,8 @@ const TIMEOUT_TARGET_PATH_NAME = "timeoutTargetPath";
 //Code voor 'slapend scherm'. De tijd moet bij de pagina voor het 'slapend scherm' aangegeven worden. Zie pagina 'meneer-kok-geruststellen'.
 //Evenals de pagina waarnaar het 'slapend scherm' gelinkt moet worden.
 window.onload = _ => {
+  initTxtZondeVoeding()
+    
   let timeoutStorageItem = sessionStorage.getItem(TIMEOUT_DATE_NAME);
   let targetPath = sessionStorage.getItem(TIMEOUT_TARGET_PATH_NAME);
   if (!timeoutStorageItem || !targetPath) return;
@@ -43,6 +45,7 @@ window.onload = _ => {
   let timeout = timeoutDate.getTime() - new Date().getTime();
   if (timeout < 0) return;
   openWithTimeout(targetPath, timeout);
+
 };
 
 function openWithTimeout(path, timeout) {
@@ -71,3 +74,34 @@ document.getElementById("geluidsfragment-knop-pauze")
   document.getElementById("geluidsfragment-pauze").style.visibility = 'hidden';
 }, false);
 
+
+//zonde lengte
+function setZondeLengte(lengte)
+{
+  sessionStorage.setItem('zondeLengte', lengte);
+}
+
+
+function getZondeLengte()
+{
+  return sessionStorage.getItem('zondeLengte');
+}
+
+
+function checkZondeLengte()
+{
+  const ZONDELENGTEMIN = 50
+  const ZONDELENGTEMAX = 100
+
+  var zondeLengte = getZondeLengte()
+
+  if(zondeLengte >= ZONDELENGTEMIN && zondeLengte <= ZONDELENGTEMAX) var path='./lengte-sonde-toelichting-goed.html'
+  else var path='./lengte-sonde-toelichting-verkeerd.html'
+
+  window.location.href = path
+}
+
+function initTxtZondeVoeding() {
+  var zondeVoedingLengte = getZondeLengte()
+  document.getElementById('invoering-sondedraad').value = zondeVoedingLengte
+};

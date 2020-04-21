@@ -37,13 +37,13 @@
             <form class="tweede-vraag" action="/action_page.php">
                 <div class="antwoord-textfield">
                     <label for="afmeting-sonde" class="witte-subheader">Nieuwe afmeting sondevoeding</label>
-                    <input type="text" id="invoering-sondedraad-nieuw" placeholder="Bijvoorbeeld 50cm">
+                    <input type="text" id="invoering-sondedraad-nieuw" onchange="setZondeLengte(this.value)" placeholder="Bijvoorbeeld 50cm">
                 </div>
             </form>
 
-            <a class="button-1"  href="lengte-sonde-toelichting-goed.html"> Stuur de gegevens
+            <button class="button-1"  onclick="checkZondeLengte()"> Stuur de gegevens
                 <img src="../images/knoppen/driehoek.png" alt="driehoek">
-            </a>
+            </button>
 
         </div>
         <div id="backgroundBlock">
