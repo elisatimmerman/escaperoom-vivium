@@ -10,13 +10,13 @@
 
 <body>
     <nav>
-        <a class="terug" href="bevestigen.casus.html">Terug</a>
+        <a class="terug" onclick="history.back()">Terug</a>
         <a class="stop" href="../index.html">Stop</a>
     </nav>
         <div id="mainDiv">
             <header>
                 <img class="h1-driehoek-blauw" src="../images/koppen/driehoek-blauw.png" alt="driehoek blauw">
-                <h1 class="kleuren"><span class="blauw">Meet de</span> 
+                <h1 class="kleuren h1-links"><span class="blauw">Meet de</span> 
                     <span class="zee-groen">bloeddruk</span> 
                     <span class="gras-groen">van één</span> 
                     iemand op.
@@ -33,19 +33,19 @@
         <div id="backgroundBlock" class="groene-achtergrond">
             <div class="opdracht">
                 <h2>Bloeddruk student</h2>
-                <form class="grid-container">
-                    <div class="antwoord-bovendruk1">
+                <form class="grid-container eerste-vraag">
+                    <div class="antwoord-textfield1">
                         <label for="lblBovendruk" class="witte-subheader">Bovendruk</label>
                         <input type="text" id="txtBovendruk1" placeholder="Bijvoorbeeld 160">
                     </div>
-                    <div class="antwoord-onderdruk">
+                    <div class="antwoord-textfield">
                         <label for="lblOnderdruk"  class="witte-subheader">Onderdruk</label>
                         <input type="text" id="txtOnderdruk" placeholder="Bijvoorbeeld 160">
                     </div>
                 </form>
 
 
-                <form class="bloeddruk-vraag" action="/action_page.php">
+                <form class="bloeddruk-vraag tweede vraag" action="/action_page.php">
                     <h2>Wat voor bloeddruk is dit?</h2>
                     <input type="radio" id="btnHoog" name="bloeddruk" value="hoog">
                     <label for="btnHoog">Hoge bloeddruk
