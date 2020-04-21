@@ -271,6 +271,43 @@ p {
     text-align: center;
 }
 
+.geluidsfragment-wit {
+    width: 6vw;
+    border: 1px solid white;
+    padding: 1em;
+    border-radius: 0.5em;
+    position: absolute;
+    left: 6em;
+    top: 6em;
+}
+
+/* #geluidsfragment-knop {
+    visibility: hidden;
+}
+
+#geluidsfragment-knop-pauze {
+    visibility: hidden;
+} */
+
+/* .geluidsfragment-wit:active {
+    display: none;
+} */
+
+.geluidsfragment-pauze-wit {
+    width: 6vw;
+    border: 1px solid white;
+    padding: 1em;
+    border-radius: 0.5em;
+    position: absolute;
+    left: 6em;
+    top: 6em;
+    visibility: hidden;
+}
+
+/* .geluidsfragment-pauze-wit:active {
+    visibility: visible;
+} */
+
 /*index.html*/
 .beginscherm img {
     width: 12.813em;
@@ -883,6 +920,10 @@ input[type="text"]:last-of-type {
 }
 
 .eerste-vraag {
+    margin-bottom: 2em;
+}
+
+.tweede-vraag {
     margin-bottom: 2em;
 }
 

@@ -33,5 +33,15 @@ function SetTimeoutToDisableScreen(targetPath, timeoutMs) {
   sessionStorage.setItem(TIMEOUT_TARGET_PATH_NAME, targetPath);
 }
 
+document.getElementById("geluidsfragment-knop")
+        .addEventListener("click", function() {
+  document.getElementById("geluidsfragment").style.visibility = 'hidden';
+  document.getElementById("geluidsfragment-pauze").style.visibility = 'visible';
+}, false);
 
+document.getElementById("geluidsfragment-knop-pauze")
+        .addEventListener("click", function() {
+  document.getElementById("geluidsfragment").style.visibility = 'visible';
+  document.getElementById("geluidsfragment-pauze").style.visibility = 'hidden';
+}, false);
 
