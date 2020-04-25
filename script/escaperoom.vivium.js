@@ -38,6 +38,7 @@ window.onload = _ => {
   initTxtZondeVoeding();
   initResponseBubbles();
   initConversation();
+  startvoiceMessage();
     
   let timeoutStorageItem = sessionStorage.getItem(TIMEOUT_DATE_NAME);
   let targetPath = sessionStorage.getItem(TIMEOUT_TARGET_PATH_NAME);
@@ -115,6 +116,13 @@ function initTxtZondeVoeding() {
   if(invoerZonde) invoerZonde.value = zondeVoedingLengte
 };
 
+
+//Voice messages
+function startvoiceMessage()
+{
+  var btnStartMessage = document.getElementById('geluidsfragment-knop')
+  if(btnStartMessage) btnStartMessage.onclick()
+}
 
 //conversatie
 function quote(str)
