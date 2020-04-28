@@ -1258,8 +1258,14 @@ input[type="text"]:last-of-type {
   }
 
 }
- 
+
 @media (min-width: 80em) {
+    #img-uitleg {
+        width: 20%;
+    }
+}
+ 
+/* @media (min-width: 80em) {
     h1 {
         font-size: 3.5em;
     }
@@ -1433,9 +1439,9 @@ input[type="text"]:last-of-type {
       width: 45%;
   }
 
-} 
+}  */
 
-@media (min-width: 110em) {   
+/* @media (min-width: 110em) {   
     h1 {
         font-size: 4em;
     }
@@ -1611,4 +1617,4 @@ input[type="text"]:last-of-type {
       width: 45%;
   }
 
-}
+} */
