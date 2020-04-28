@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <title>Escaperoom Vivium</title>
+</head>
+
+<body>
+    <nav>
+        <a class="terug" onclick="history.back()">Terug</a>
+        <a class="stop" href="../index.html">Stop</a>
+    </nav>
+        <div id="mainDiv">
+            <header>
+                <img class="h1-driehoek-blauw" src="../images/koppen/driehoek-blauw.png" alt="driehoek blauw">
+                <h1 class="kleuren h1-links"><span class="blauw">Meet de</span> 
+                    <span class="zee-groen">bloeddruk</span> 
+                    <span class="gras-groen">van één</span> 
+                    iemand op.
+                </h1>      
+                <hr>
+            </header>
+            
+            <div class="info">
+                <p>Als jullie de bloeddrukwaarden weten, kunnen jullie dat in dit scherm invullen.</p>
+            </div>  
+        </div>
+
+
+        <div id="backgroundBlock" class="groene-achtergrond">
+            <div class="opdracht">
+                <h2>Bloeddruk student</h2>
+                <form class="grid-container eerste-vraag">
+                    <div class="antwoord-textfield1">
+                        <label for="lblBovendruk" class="witte-subheader">Bovendruk</label>
+                        <input type="text" id="txtBovendruk1" placeholder="Bijvoorbeeld 160">
+                    </div>
+                    <div class="antwoord-textfield">
+                        <label for="lblOnderdruk"  class="witte-subheader">Onderdruk</label>
+                        <input type="text" id="txtOnderdruk" placeholder="Bijvoorbeeld 160">
+                    </div>
+                </form>
+
+
+                <form class="bloeddruk-vraag tweede vraag" action="/action_page.php">
+                    <h2>Wat voor bloeddruk is dit?</h2>
+                    <input type="radio" id="btnHoog" name="bloeddruk" value="hoog">
+                    <label for="btnHoog">Hoge bloeddruk
+                        <img src="../images/knoppen/driehoek.png" alt="driehoek">
+                    </label>
+                    <input type="radio" id="btnNormaal" name="bloeddruk" value="normaal">
+                    <label for="btnNormaal">Normale bloeddruk
+                        <img src="../images/knoppen/driehoek.png" alt="driehoek">
+                    </label>
+                    <input type="radio" id="btnLaag" name="bloeddruk" value="laag">
+                    <label for="btnLaag">Lage bloeddruk
+                        <img src="../images/knoppen/driehoek.png" alt="driehoek">
+                    </label>
+                </form>
+            </div>
+            <a class="button-4 bottom-right"  href="7-meneer-dijkstra-bloeddruk-opdracht-uitleg.html"> Stuur de gegevens
+                <img src="../images/knoppen/driehoek.png" alt="driehoek">
+            </a>
+        </div>
+    
+
+
+    <script src="../script/escaperoom.vivium.js"></script>
+</body>
+</html>

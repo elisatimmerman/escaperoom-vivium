@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <title>Escaperoom Vivium</title>
+</head>
+
+<body>
+    <div class="full-background">
+        <nav>
+            <a class="terug-wit back" onclick="history.back()">Terug</a>
+            <a class="stop-wit" href="../index.html">Stop</a>
+        </nav> 
+        <audio id="demo" src="../geluidsfragmenten/meneer-mevrouw-kok/mevrouw-kok-bang.aac"></audio>
+            <div>
+                <button id="geluidsfragment-knop" onclick="document.getElementById('demo').play()"> <img src="../images/knoppen/geluidsfragment-wit.png" class="geluidsfragment-wit" id="geluidsfragment"></button>
+                <button id="geluidsfragment-knop-pauze" onclick="document.getElementById('demo').pause()"> <img src="../images/knoppen/geluidsfragment-pauze-wit_.png" class="geluidsfragment-pauze-wit" id="geluidsfragment-pauze"></button>
+            </div> 
+            <div class="antwoordBubbel5">
+                “Au, het doet zo’n pijn. Auuuu, Auuu.”
+            </div>
+            <img src="../images/meneer-mevrouw-kok/mevrouw-kok-bang.png" alt="Meneer Kok instemmend" id="portret-groot"> 
+            <a class="button-4 bottom-right"  href="16-mevrouw-kok-geruststellen.html"> Reageer op mevrouw
+                <img src="../images/knoppen/driehoek.png" alt="driehoek">
+            </a>
+        <script src="../script/escaperoom.vivium.js"></script>
+    </div>
+</body>
+
+</html>
