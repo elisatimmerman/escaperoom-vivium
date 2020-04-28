@@ -271,6 +271,26 @@ p {
     text-align: center;
 }
 
+.geluidsfragment-wit {
+    width: 5%;
+    position: absolute;
+    top: 4em;
+    left: 4em;
+    border: 1px solid white;
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+.geluidsfragment-pauze-wit {
+    width: 5%;
+    position: absolute;
+    top: 4em;
+    left: 4em;
+    border: 1px solid white;
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
 /*index.html*/
 .beginscherm img {
     width: 12.813em;
@@ -384,7 +404,7 @@ p {
 }
 
 .blok-casus > p:nth-of-type(2) {
-    width: 80%;
+    width: 90%;
     line-height: 1.3em;
     margin-bottom: 10%;
 }
