@@ -25,7 +25,7 @@
             </header>
             
             <div class="info">
-                <p>Met je vinger kan je de symptomen verbinden aan de juiste bloeddruk.</p>
+                <p>Met je vinger kan je een kleur geven aan de symptomen door op deze te drukken. Match de symptomen aan de juiste bloeddruk.</p>
             </div>  
         </div>
 
@@ -36,21 +36,21 @@
                     <div class="blauwe-achtergrond bloeddruk-antwoord">Hoge bloeddruk</div>
                     <div class="donkergroene-achtergrond bloeddruk-antwoord">Lage bloeddruk</div>
                 </div>
-                <div class="aligner-antwoorden"> 
-                    <div class="bloeddruk-antwoord">Licht in het hoofd</div>
-                    <div class="bloeddruk-antwoord">Vermoeidheid</div>
-                    <div class="bloeddruk-antwoord">Duizeligheid</div>
-                    <div class="bloeddruk-antwoord">Kortademigheid</div>
-                    <div class="bloeddruk-antwoord">Flauwvallen</div>
-                    <div class="bloeddruk-antwoord">Wazig zien</div>
-                    <div class="bloeddruk-antwoord">Misselijkheid en braken</div>
-                    <div class="bloeddruk-antwoord">Hoofdpijn</div>
-                    <div class="bloeddruk-antwoord">Rusteloosheid</div>
+                <div id='symptomen' class="aligner"> 
+                    <button onclick="bloeddrukSymtomsClicked(this.id)" class="bloeddruk-antwoord" id="btnLichtInHetHoofd">Licht in het hoofd</button>
+                    <button onclick="bloeddrukSymtomsClicked(this.id)" class="bloeddruk-antwoord" id="btnVermoeidheid">Vermoeidheid</button>
+                    <button onclick="bloeddrukSymtomsClicked(this.id)" class="bloeddruk-antwoord" id="btnDuizeligheid">Duizeligheid</button>
+                    <button onclick="bloeddrukSymtomsClicked(this.id)" class="bloeddruk-antwoord" id="btnKortademigheid">Kortademigheid</button>
+                    <button onclick="bloeddrukSymtomsClicked(this.id)" class="bloeddruk-antwoord" id="btnFlauwvallen">Flauwvallen</button>
+                    <button onclick="bloeddrukSymtomsClicked(this.id)" class="bloeddruk-antwoord" id="btnWazigZien">Wazig zien</button>
+                    <button onclick="bloeddrukSymtomsClicked(this.id)" class="bloeddruk-antwoord" id="btnMisselijkheidEnBraken">Misselijkheid en braken</button>
+                    <button onclick="bloeddrukSymtomsClicked(this.id)" class="bloeddruk-antwoord" id="btnHoofdpijn">Hoofdpijn</button>
+                    <button onclick="bloeddrukSymtomsClicked(this.id)" class="bloeddruk-antwoord" id="btnRusteloosheid">Rusteloosheid</button>
                 </div>
             </div>
-        <a class="button-4 bottom-right"  href="./bloeddrukToelichting.html"> Stuur de gegevens in
+        <button class="button-2 bottom-right" id='btnConfirm' onclick="confirmationButtonClicked()" autocomplete="off" disabled="disabled"> Stuur de gegevens in
                 <img src="../images/knoppen/driehoek.png" alt="driehoek">
-            </a>
+            </button>
         </div>
     
 
