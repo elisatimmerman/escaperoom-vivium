@@ -148,6 +148,10 @@ p {
     opacity: 0.2;
 }
 
+.button-2:active {
+    background-color: gray;
+  }
+
 .button-2 img {
     width: 0.875em;
     margin-left: 1em;
@@ -606,20 +610,24 @@ input[type="text"] {
     border-radius: 5px;
     font-size: 1em;
     font-weight: 200;
-    color: #919191;
     padding: 0.6em 0em 0.6em 0.6em;
     margin: 0;
     margin-top: 0.5em;
     margin-bottom: 3.750em;
+    border: 1px solid gray;
   }
 
   input[type="text"]:focus {
     outline: none;
-    border: 1px solid #00257A;
+    border: 1px solid#00257A;
 }
 
 input[type="text"]:last-of-type {
     margin-bottom: 0;
+  }
+
+  input[type="text"]::placeholder {
+    color: #919191;
   }
 
 
@@ -925,14 +933,6 @@ input[type="text"]:last-of-type {
     flex-wrap: wrap;
 }
 
-#txtBovendruk {
-    margin-bottom: 1.5em;
-}
-
-#txtBovendruk1 {
-    margin-bottom: 0;
-}
-
 .antwoord-textfield > label {
     width: 100%;
 }
@@ -1112,7 +1112,7 @@ input[type="text"]:last-of-type {
     border-radius: 10px;
     background-color: white;
     color: black;
-    padding: 0.5em;
+    padding: 0.1em;
     padding-left: 1em;
     margin: 10px;
     line-height: 40px;

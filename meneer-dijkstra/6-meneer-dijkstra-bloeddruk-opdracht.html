@@ -34,9 +34,9 @@
             <div class="opdracht">
                 <h2>Bloeddruk student</h2>
                 <form class="grid-container eerste-vraag">
-                    <div class="antwoord-textfield1">
+                    <div class="antwoord-textfield">
                         <label for="lblBovendruk" class="witte-subheader">Bovendruk</label>
-                        <input type="text" id="txtBovendruk1" placeholder="Bijvoorbeeld 160">
+                        <input type="text" id="txtBovendruk" placeholder="Bijvoorbeeld 160">
                     </div>
                     <div class="antwoord-textfield">
                         <label for="lblOnderdruk"  class="witte-subheader">Onderdruk</label>
@@ -47,21 +47,23 @@
 
                 <form class="bloeddruk-vraag tweede vraag" action="/action_page.php">
                     <h2>Wat voor bloeddruk is dit?</h2>
-                    <input type="radio" id="btnHoog" name="bloeddruk" value="hoog">
-                    <label for="btnHoog">Hoge bloeddruk
-                        <img src="../images/knoppen/driehoek.png" alt="driehoek">
-                    </label>
-                    <input type="radio" id="btnNormaal" name="bloeddruk" value="normaal">
-                    <label for="btnNormaal">Normale bloeddruk
-                        <img src="../images/knoppen/driehoek.png" alt="driehoek">
-                    </label>
-                    <input type="radio" id="btnLaag" name="bloeddruk" value="laag">
-                    <label for="btnLaag">Lage bloeddruk
-                        <img src="../images/knoppen/driehoek.png" alt="driehoek">
-                    </label>
+                    <div id="rbtnListBloeddrukSoort">
+                        <input type="radio" id="btnHoog" name="bloeddrukSoort" value="hoog">
+                        <label for="btnHoog">Hoge bloeddruk
+                            <img src="../images/knoppen/driehoek.png" alt="driehoek">
+                        </label>
+                        <input type="radio" id="btnNormaal" name="bloeddrukSoort" value="normaal">
+                        <label for="btnNormaal">Normale bloeddruk
+                            <img src="../images/knoppen/driehoek.png" alt="driehoek">
+                        </label>
+                        <input type="radio" id="btnLaag" name="bloeddrukSoort" value="laag">
+                        <label for="btnLaag">Lage bloeddruk
+                            <img src="../images/knoppen/driehoek.png" alt="driehoek">
+                        </label>
+                    </div>
                 </form>
             </div>
-            <a class="button-4 bottom-right"  href="7-meneer-dijkstra-bloeddruk-opdracht-uitleg.html"> Stuur de gegevens
+            <a class="button-4 bottom-right"  onclick="confirmBloeddruk()" href="./7-meneer-dijkstra-bloeddruk-opdracht-uitleg.html"> Stuur de gegevens
                 <img src="../images/knoppen/driehoek.png" alt="driehoek">
             </a>
         </div>
