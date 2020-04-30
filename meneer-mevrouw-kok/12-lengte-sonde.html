@@ -35,14 +35,14 @@
                 <form class="grid-container">
                     <div class="antwoord-bovendruk1">
                         <label for="lblBovendruk" class="witte-subheader">Afmeting draad</label>
-                        <input type="text" id="txtBovendruk1" placeholder="Bijvoorbeeld 50cm">
+                        <input type="text" onchange="setZondeLengte(this.value)" id="txtBovendruk1" placeholder="Bijvoorbeeld 50cm">
                     </div>
                 </form>
 
             </div>
-            <a class="button-4 bottom-right"  href="13-lengte-sonde-toelichting-goed.html"> Stuur de gegevens in
+            <button class="button-4 bottom-right" onclick="checkZondeLengte()"> Stuur de gegevens
                 <img src="../images/knoppen/driehoek.png" alt="driehoek">
-            </a>
+            </button>
         </div>
     
 

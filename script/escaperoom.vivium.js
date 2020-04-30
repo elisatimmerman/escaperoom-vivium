@@ -150,8 +150,8 @@ function checkZondeLengte() {
 
   var zondeLengte = getZondeLengte()
 
-  if (zondeLengte >= ZONDELENGTEMIN && zondeLengte <= ZONDELENGTEMAX) var path = './lengte-sonde-toelichting-goed.html'
-  else var path = './lengte-sonde-toelichting-verkeerd.html'
+  if (zondeLengte >= ZONDELENGTEMIN && zondeLengte <= ZONDELENGTEMAX) var path = './13-lengte-sonde-toelichting-goed.html'
+  else var path = './14-lengte-sonde-toelichting-verkeerd.html'
 
   window.location.href = path
 }
@@ -267,6 +267,47 @@ responses = {
   'meneer-dijkstra-antwoord8': {
     'success': false,
     'message': 'Ik heb al vaker filmpjes van uw kleindochter gezien, dus deze hoeft voor mij niet. Ik heb er al genoeg gezien.',
+    'feedback': 'lekker bezig',
+  },
+
+  'mevrouw-kok-antwoord1': {
+    'success': true,
+    'message': 'Ach meneer, ik merk dat het veel met je doet. Kun je mij uitleggen waarom u het zo vervelend vindt? Waarom doet het advies om mevrouw een sonde te geven zoveel met je? Denkt je niet ook dat het eigenlijk beter is?',
+    'feedback': 'lekker bezig',
+  },
+  'mevrouw-kok-antwoord2': {
+    'success': false,
+    'message': 'Je pakt een zakdoek en een glas water en gaat er bij zitten. Je laat de emoties wat zakken, waarna je vraagt: “Wat raakt u het meest?',
+    'feedback': 'lekker bezig',
+  },  
+  'mevrouw-kok-antwoord3': {
+    'success': true,
+    'message': 'Oh sorry, dat was niet mijn bedoeling! Komen uw kinderen vanavond nog?',
+    'feedback': 'lekker bezig',
+  },  
+  'mevrouw-kok-antwoord4': {
+    'success': false,
+    'message': '',
+    'feedback': 'lekker bezig',
+  },
+  'mevrouw-kok-antwoord5': {
+    'success': true,
+    'message': 'Ik snap het helemaal meneer, maar de diëtist en logopedist geven niet voor niks dit advies. Zal ik vragen of een van hen nog een keer langs loopt om het er met u over te hebben? Zij kunnen het beter uitleggen dan ik.',
+    'feedback': 'lekker bezig',
+  },
+  'mevrouw-kok-antwoord6': {
+    'success': false,
+    'message': 'Ik denk ook echt dat uw vrouw sondevoeding moet krijgen. Ik vind het zo niet veilig meer voor mevrouw. Misschien kunnen we een ander moment zoeken waarop jij uw vrouw kan helpen?',
+    'feedback': 'lekker bezig',
+  },  
+  'mevrouw-kok-antwoord7': {
+    'success': true,
+    'message': 'Meneer, ze geven dit advies niet voor niks. Als ik jou was zou ik toch kiezen voor sondevoeding voor mevrouw. Ze zijn echt bang dat het de volgende keer helemaal fout gaat met het eten.',
+    'feedback': 'lekker bezig',
+  },  
+  'mevrouw-kok-antwoord8': {
+    'success': false,
+    'message': '',
     'feedback': 'lekker bezig',
   },
 }
