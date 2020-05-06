@@ -87,7 +87,8 @@ window.onload = _ => {
   initTxtZondeVoeding();
   initResponseBubbles();
   initConversation();
-  initBloeddruk()
+  initBloeddruk();
+  initTimer();
   startvoiceMessage();
 
   let timeoutStorageItem = sessionStorage.getItem(TIMEOUT_DATE_NAME);
@@ -132,6 +133,31 @@ try {
     }, false);
 }
 catch (e) { }
+
+
+
+function startTimer(duration, display) {
+  var timer = duration, minutes, seconds;
+  setInterval(function () {
+      minutes = parseInt(timer / 60, 10)
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+
+      if (--timer < 0) timer = duration;
+  }, 1000);
+}
+
+function initTimer() {
+  var now = Date.now()
+  var timeOut = new Date(sessionStorage.getItem(TIMEOUT_DATE_NAME));
+  timeOut = (timeOut - now) / 1000 //Get seconds till timeout
+  display = document.querySelector('#time');
+  if(display) startTimer(timeOut, display);
+};
 
 //zonde lengte
 function setZondeLengte(lengte) {
@@ -231,83 +257,123 @@ responses = {
   'meneer-dijkstra-antwoord1': {
     'success': false,
     'message': 'Wij moeten jou in de gaten houden, maar als je dat niet wilt dan gaan we wel weer weg. Weet wel dat we morgen pas weer tijd hebben voor u en dat we ook echt niet van plan zijn eerder te komen.',
-    'feedback': 'lekker bezig',
+    'feedback': 'Dit is niet het juiste antwoord. Het is belangrijk voor het monitoren van de toestand van meneer Dijkstra dat je zijn bloeddruk dagelijks meet.',
   },
   'meneer-dijkstra-antwoord2': {
     'success': false,
     'message': 'U bent hier ook niet voor uw rust. Kom hier met uw arm, we moeten uw bloeddruk meten.',
-    'feedback': 'lekker bezig',
+    'feedback': 'Dit is niet het juiste antwoord. Door meneer Dijkstra op een onbeleefde manier te beantwoorden, is de kans groot dat meneer Dijkstra je geen toestemming geeft om zijn bloeddruk te meten.',
   },
   'meneer-dijkstra-antwoord3': {
     'success': false,
     'message': 'We hebben niet veel tijd en zin dus we zijn toch zo weer weg.',
-    'feedback': 'lekker bezig',
+    'feedback': 'Dit is niet het juiste antwoord. Het is niet beleefd om tegen patiënten te zeggen dat je niet veel tijd hebt, voor patiënten maak je tijd.',
   },
   'meneer-dijkstra-antwoord4': {
     'success': true,
     'message': 'Nee meneer, we moeten heel even uw bloeddruk opmeten, zodat we in de gaten kunnen houden hoe het met u gaat. Het zal niet lang duren, dan kunt u daarna weer verder met uitrusten.',
-    'feedback': 'lekker bezig',
+    'feedback': 'Dit is inderdaad het juiste antwoord. Op deze manier leg je meneer Dijkstra uit dat het meten van zijn bloeddruk belangrijk is voor het monitoren van zijn dagelijkse toestand, maar geef je ook aan dat je maar een paar minuten van zijn tijd nodig heeft, zodat hij daarna weer kan rusten.',
   },
 
   'meneer-dijkstra-antwoord5': {
     'success': true,
     'message': 'Wat goed van uw kleindochter! Ik moet nu verder, maar ik kom vanmiddag als ik tijd heb wel even kijken naar uw filmpje oké?',
-    'feedback': 'lekker bezig',
+    'feedback': 'Dit is inderdaad het juiste antwoord. Je toont interesse in iets wat betekenisvol is voor meneer Dijkstra en spreekt gelijk een tijd met hem af. Op deze manier weet meneer Dijkstra dat je langskomt, ondanks dat je nu geen tijd meer hebt.',
   },
   'meneer-dijkstra-antwoord6': {
     'success': false,
     'message': 'Nee hoor, daar heb ik echt geen interesse in.',
-    'feedback': 'lekker bezig',
+    'feedback': 'Dit is niet het juiste antwoord. Probeer beleefder te antwoorden en interesse te tonen in een betekenisvol onderdeel van het leven van meneer.',
   },
   'meneer-dijkstra-antwoord7': {
-    'success': true,
+    'success': false,
     'message': 'Sorry, maar dat komt nu even niet gelegen. Misschien een andere keer.',
-    'feedback': 'lekker bezig',
+    'feedback': 'Dit is niet het juiste antwoord. Door te antwoorden dat je geen tijd hebt, gaat meneer Dijkstra denken dat je waarschijnlijk niet meer terug komt en geen interesse hebt, omdat je altijd druk bent.',
   },
   'meneer-dijkstra-antwoord8': {
     'success': false,
     'message': 'Ik heb al vaker filmpjes van uw kleindochter gezien, dus deze hoeft voor mij niet. Ik heb er al genoeg gezien.',
-    'feedback': 'lekker bezig',
+    'feedback': 'Dit is niet het juiste antwoord. Toon interesse in iets wat betekenisvol is voor meneer.',
+  },
+  'meneer-dijkstra-antwoord9': {
+    'success': true,
+    'message': 'Ik weet dat het vervelend is, maar dit moet toch even gebeuren. Het is voor u vervelender als we de katheter niet vervangen en hij verstopt zou raken.',
+    'feedback': 'Dit is inderdaad het juiste antwoord. Op deze manier beaam je dat het vervelend is, maar leg je meneer Dijkstra ook de noodzaak van de handeling uit. Hij begrijpt hierdoor beter waarom je de katheter wilt verwisselen.',
+  },
+  'meneer-dijkstra-antwoord10': {
+    'success': false,
+    'message': 'Niet zeuren, we gaan gewoon door. Des te eerder bent u er weer van af.',
+    'feedback': 'Dit is niet het juiste antwoord. Je kan meneer Dijkstra beter beleefd uit te leggen waarom je de katheter wilt verwisselen en stel hem gerust.',
+  },
+  'meneer-dijkstra-antwoord11': {
+    'success': false,
+    'message': 'We gaan gewoon beginnen.',
+    'feedback': 'Dit is niet het juiste antwoord. Door meneer Dijkstra geen uitleg te geven en tegen zijn zin een handeling te starten, zal hij je geen toestemming geven en kan je de katheter niet gaan verwisselen.',
+  },
+  'meneer-dijkstra-antwoord12': {
+    'success': false,
+    'message': 'Dan doet mijn collega het morgen.',
+    'feedback': 'Dit is niet het juiste antwoord. De katheter moet vervangen worden, om te voorkomen dat hij verstopt raakt. Als je hier een dag mee wacht, kan dit problemen veroorzaken voor meneer. ',
   },
 
   'mevrouw-kok-antwoord1': {
-    'success': true,
+    'success': false,
     'message': 'Ach meneer, ik merk dat het veel met je doet. Kun je mij uitleggen waarom u het zo vervelend vindt? Waarom doet het advies om mevrouw een sonde te geven zoveel met je? Denkt je niet ook dat het eigenlijk beter is?',
-    'feedback': 'lekker bezig',
+    'feedback': 'Dit is niet het juiste antwoord. Door veel vragen te gaan stellen geef je meneer Kok niet de ruimte om zijn emoties te laten zien, maar gaat hij naar jou luisteren. Als je de emoties bij meneer Kok eerst even laat zakken, door hem bijvoorbeeld een glaasje water aan te bieden, gaat hij waarschijnlijk vanzelf vertellen wat er aan de hand is. Als dit niet het geval is kan je altijd nog vragen wat hem zo verdrietig maakt.',
   },
   'mevrouw-kok-antwoord2': {
-    'success': false,
-    'message': 'Je pakt een zakdoek en een glas water en gaat er bij zitten. Je laat de emoties wat zakken, waarna je vraagt: “Wat raakt u het meest?',
-    'feedback': 'lekker bezig',
+    'success': true,
+    'message': 'Wat raakt u het meest?',
+    'feedback': 'Dit is inderdaad het juiste antwoord. Door de emoties eerst wat te laten zakken en daarna meneer Kok zelf te laten vertellen wat er aan de hand is, kan hij de situatie zelf ook weer wat verwerken en/of dingen meer op een rijtje zetten.',
   },  
   'mevrouw-kok-antwoord3': {
-    'success': true,
+    'success': false,
     'message': 'Oh sorry, dat was niet mijn bedoeling! Komen uw kinderen vanavond nog?',
-    'feedback': 'lekker bezig',
+    'feedback': 'Dit is niet helemaal het juiste antwoord. Vanuit ongemak kan het zijn dat je het gesprek graag op een ander onderwerp wilt krijgen, maar door dit ongemak ga je eigenlijk alleen de huilende Gerard en/of zijn verhaal vermijden, terwijl de Gerard je juist nodig heeft om zijn emoties en achterliggende verhaal met je te delen.',
   },  
   'mevrouw-kok-antwoord4': {
     'success': false,
-    'message': '',
-    'feedback': 'lekker bezig',
+    'message': 'Sorry, ik kom later wel terug',
+    'feedback': 'Dit is niet het juiste antwoord. Je laat meneer Kok nu alleen in zijn verdriet, waardoor je zijn verhaal vermijdt. Hij heeft je juist nodig om zijn emoties en achterliggende verhaal te delen.',
   },
   'mevrouw-kok-antwoord5': {
-    'success': true,
-    'message': 'Ik snap het helemaal meneer, maar de diëtist en logopedist geven niet voor niks dit advies. Zal ik vragen of een van hen nog een keer langs loopt om het er met u over te hebben? Zij kunnen het beter uitleggen dan ik.',
-    'feedback': 'lekker bezig',
+    'success': false,
+    'message': 'Ik denk ook echt dat mevrouw sondevoeding moet krijgen. Ik vind het zo echt niet veilig meer voor haar. Er is vast een ander moment waarop u bij mevrouw Kok kan zijn. Daar verzint u wel weer wat anders voor. Maakt u zich daar maar geen zorgen over.',
+    'feedback': 'Dit is niet het juiste antwoord. Meneer Kok moet nu zelf een moment creëren waarop hij bij zijn echtgenote kan zijn. Meneer weet waarschijnlijk niet dat het voor hem ook mogelijk is om te ondersteunen bij het geven van de sondevoeding. Dit kan je hem aanbieden.',
   },
   'mevrouw-kok-antwoord6': {
     'success': false,
-    'message': 'Ik denk ook echt dat uw vrouw sondevoeding moet krijgen. Ik vind het zo niet veilig meer voor mevrouw. Misschien kunnen we een ander moment zoeken waarop jij uw vrouw kan helpen?',
-    'feedback': 'lekker bezig',
+    'message': 'Ik snap het helemaal meneer Kok, maar de diëtist en logopedist geven niet voor niks dit advies. Ik stuur een van hen vanmiddag wel even langs voor je oké? Dan kunnen zij het er nog een keer met u over hebben.',
+    'feedback': 'Dit is niet helemaal het juiste antwoord. Probeer niet gelijk te verwijzen naar een diëtist of logopedist. Wat kan je zelf eerst doen om het verdriet van meneer Kok te ondervangen?',
   },  
   'mevrouw-kok-antwoord7': {
-    'success': true,
-    'message': 'Meneer, ze geven dit advies niet voor niks. Als ik jou was zou ik toch kiezen voor sondevoeding voor mevrouw. Ze zijn echt bang dat het de volgende keer helemaal fout gaat met het eten.',
-    'feedback': 'lekker bezig',
+    'success': false,
+    'message': 'Meneer Kok, ze geven dit advies niet voor niks. Als ik u was zou ik toch kiezen voor sondevoeding voor uw echtgenote. Ze zijn echt bang dat het de volgende keer helemaal fout gaat met het eten.',
+    'feedback': 'Dit is niet het juiste antwoord. Probeer beter naar meneer Kok te luisteren en zijn verdriet te ondervangen en samen met hem een oplossing te verzinnen voor het moment samen.',
   },  
   'mevrouw-kok-antwoord8': {
+    'success': true,
+    'message': 'Ik snap het helemaal meneer Kok. Het is ook een belangrijk moment van jullie samen en dat willen we jullie absoluut niet afnemen. Zullen we samen kijken hoe u uw echtgenote toch kan blijven ondersteunen bij de maaltijden? U zou bijvoorbeeld kunnen ondersteunen bij het geven van de sondevoeding. Dit kunnen wij u leren. Denk er maar even over na, dan kom ik na mijn lunch wel weer even langs, oké?',
+    'feedback': 'Dit is inderdaad het juiste antwoord. Met dit antwoord ondersteun je meneer Kok en verzin je samen met hem een alternatief voor het moment samen. Door hem aan te bieden dat hij ondersteuning kan bieden bij het geven van de sondevoeding, behoudt hij het moment samen en verlicht je zijn verdriet in het kiezen voor een sonde voor zijn echtgenote.',
+  },
+  'mevrouw-kok-antwoord9': {
     'success': false,
-    'message': '',
-    'feedback': 'lekker bezig',
+    'message': 'Rustig maar mevrouw Kok, we zijn bijna klaar. Even doorbijten.',
+    'feedback': 'Dit is niet het juiste antwoord. Probeer meer beleefd te zijn in het geruststellen van mevrouw Kok.',
+  },
+  'mevrouw-kok-antwoord10': {
+    'success': false,
+    'message': 'Je negeert het en gaat door met het inbrengen van de sonde. Het moet tenslotte toch gewoon gebeuren.',
+    'feedback': 'Dit is niet het juiste antwoord. Het inbrengen van een sonde is een erg nare ervaring en op deze manier maak je het voor mevrouw Kok niet prettiger. ',
+  },
+  'mevrouw-kok-antwoord11': {
+    'success': true,
+    'message': 'U doet het super goed. Probeer nog een keer mee te slikken, we zijn er bijna. Knijp maar in de hand van mijn collega.',
+    'feedback': 'Dit is inderdaad het juiste antwoord. Je stelt op deze manier mevrouw Kok goed gerust.',
+  },
+  'mevrouw-kok-antwoord12': {
+    'success': false,
+    'message': 'Je vraagt of je collega die erbij is wat dichterbij komt staan om mevrouw Kok vast te houden en rustig toe te spreken.',
+    'feedback': 'Dit is niet helemaal het juiste antwoord. Jij bent bezig met het inbrengen van de sonde, dus ook jij kan mevrouw geruststellen tijdens het inbrengen van de sonde.',
   },
 }
