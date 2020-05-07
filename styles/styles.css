@@ -5,7 +5,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
+    font-size: 135%;
     padding: 4em;
     height: 100vh;
     margin: 0;
@@ -20,7 +20,7 @@ html, body {
 
 h1 {
     font-weight: normal;
-    font-size: 3.75em;
+    font-size: 4em;
     color: #00257A;
     margin-top: 0;
 }
@@ -71,12 +71,12 @@ hr {
 
 h2 {
     font-weight: 500;
-    font-size: 1.875em;
+    font-size: 2em;
     margin: 0.5em 0 0.5em 0;
 }
 
 p {
-    font-size: 1.25em;
+    font-size: 1.5em;
     line-height: 1.65em;
 }
 
