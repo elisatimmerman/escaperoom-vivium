@@ -2,6 +2,11 @@
 
 
 function bloeddrukSymtomsClicked(btnId) {
+  /* Deze functie wordt aangeroepen wanneer er een symptoom van een bloeddruk wordt aangeklikt. 
+  * Wanneer dit gebeurd, wordt de value van de knop gerotate. Ook wordt de kleur van de achtergrond aangepast om dit te laten zien.
+  */
+
+  // Achtergrondkleuren van bloeddruksymptomen opdracht
   const achtergronden = [
     '#00257A',
     '#009B74'
@@ -15,6 +20,7 @@ function bloeddrukSymtomsClicked(btnId) {
   btn.style.backgroundColor = achtergronden[btn.value]
   btn.style.color = '#ffffff'
 
+  //Wanneer er 9 verschillende knoppen zijn ingedrukt, wordt de confirmknop geënabled
   if (btn.getAttribute('clicked') == null) {
     btnConfirm.value++
     if (btnConfirm.value >= 9) btnConfirm.disabled = false;
@@ -23,11 +29,15 @@ function bloeddrukSymtomsClicked(btnId) {
 }
 
 function confirmationButtonClicked() {
+  /*De confirmatieknop leidt naar het volgende scherm*/
   window.location.href = './10-meneer-dijkstra-irrelevant.html'
 }
 
 function setBloeddruk(Onderdruk, Bovendruk, Soort)
 {
+  /* Deze functie slaat de bloeddruk op in de sessionstorage
+   * De bloeddruk bestaat uit 3 waardes: onderdruk, bovendruk, soort
+   */
   var Bloeddruk = {
   'Onderdruk': Onderdruk,
   'Bovendruk': Bovendruk,
@@ -39,6 +49,8 @@ function setBloeddruk(Onderdruk, Bovendruk, Soort)
 
 function getBloeddruk()
 {
+  /* Deze functie haalt de bloeddruk op uit de sessionstorage
+  */
   var Bloeddruk = sessionStorage.getItem('Bloeddruk');
   Bloeddruk = Bloeddruk ? JSON.parse(Bloeddruk) : {}
   
@@ -47,6 +59,8 @@ function getBloeddruk()
 
 function confirmBloeddruk()
 {
+  /* Deze functie wordt gebruikt om de bloeddrukwaarden op te halen van de pagina, deze worden vervolgens opgeslagen. 
+  */
   var Onderdruk = document.getElementById('txtOnderdruk').value
   var Bovendruk = document.getElementById('txtBovendruk').value
 
@@ -60,6 +74,8 @@ function confirmBloeddruk()
 
 function initBloeddruk()
 {
+  /**Deze functie wordt gebruikt om de textvakken en knoppen goed te zetten. Dit wordt gedaan met de waarden die zijn opgeslagen.
+   */
   var Bloeddruk = getBloeddruk()
 
   var Onderdruk = document.getElementById('txtOnderdruk')
@@ -84,6 +100,7 @@ var TIMEOUT_TARGET_PATH_NAME = "timeoutTargetPath";
 //Code voor 'slapend scherm'. De tijd moet bij de pagina voor het 'slapend scherm' aangegeven worden. Zie pagina 'meneer-kok-geruststellen'.
 //Evenals de pagina waarnaar het 'slapend scherm' gelinkt moet worden.
 window.onload = _ => {
+  // Roep alle functies aan die bij het laden van de pagina benodigd zijn
   initTxtZondeVoeding();
   initResponseBubbles();
   initConversation();
@@ -137,6 +154,7 @@ catch (e) { }
 
 
 function startTimer(duration, display) {
+  //Hiermee wordt de timer gestart waardoor de gebruiker weet wanneer er wordt doorverwezen naar de volgende pagina
   var timer = duration, minutes, seconds;
   setInterval(function () {
       minutes = parseInt(timer / 60, 10)
@@ -152,6 +170,9 @@ function startTimer(duration, display) {
 }
 
 function initTimer() {
+  /* In deze functie wordt het tijdstip opgehaald voor wanneer er wordt doorverwezen naar een andere pagina. 
+  Vervolgens wordt het aantal seconden en minuten berekend tot er verder kan worden gegaan. Hierop wordt de timer ingesteld.
+  */
   var now = Date.now()
   var timeOut = new Date(sessionStorage.getItem(TIMEOUT_DATE_NAME));
   timeOut = (timeOut - now) / 1000 //Get seconds till timeout
@@ -171,6 +192,12 @@ function getZondeLengte() {
 
 
 function checkZondeLengte() {
+  /**
+   * Hier wordt de lengte van de zonde gecontroleerd.
+   * Eerst wordt de ingevoerde waarde van de zonde berekend. Daarna wordt er gegeken of deze ligt tussen bepaalde waarden.
+   * Wanneer dit het geval is, wordt er doorverwezen naar de goede pagina. 
+   * Anders wordt er doorverwezen naar de pagina waar de gebruiker het nog een keer kan proberen.
+   */
   const ZONDELENGTEMIN = 50
   const ZONDELENGTEMAX = 100
 
@@ -183,6 +210,9 @@ function checkZondeLengte() {
 }
 
 function initTxtZondeVoeding() {
+  /**
+   * Haal de waarde op van de zondevoeding. Vul deze in in het textvak 'invoering-sonde-draad'
+   */
   var zondeVoedingLengte = getZondeLengte()
   var invoerZonde = document.getElementById('invoering-sondedraad')
   if (invoerZonde) invoerZonde.value = zondeVoedingLengte
@@ -191,12 +221,14 @@ function initTxtZondeVoeding() {
 
 //Voice messages
 function startvoiceMessage() {
+  /* Wanneer er een voice bericht aanwezig is, wordt deze automatisch gestart bij het aanroepen van deze functie*/
   var btnStartMessage = document.getElementById('geluidsfragment-knop')
   if (btnStartMessage) btnStartMessage.onclick()
 }
 
 //conversatie
 function quote(str) {
+  /* Zet een string tussen aanhalingstekens */
   return `“${str}”`
 }
 
@@ -210,16 +242,19 @@ function getFeedback() {
 }
 
 function enterFeedback(feedbackId) {
+  /* Deze functie wordt gebruikt om het feedback id op te slaan */
   setFeedback(feedbackId)
 }
 
 function retrieveFeedbackText(feedbackId) {
+  /* deze functie wordt gebruikt om het feedback bericht op te halen. */
   var message = responses[feedbackId]['message']
   var btn = document.getElementById(feedbackId)
   if (btn) btn.appendChild(document.createTextNode(quote(message)));
 }
 
 function initResponseBubbles() {
+  /* Deze functie wordt gebruikt om text te zetten in de responsebubles. Hierbij wordt het id van de bubble gebruikt om de feedbacktext op te halen*/
   var responseBubbles = document.getElementById('responseBubbles')
   if (responseBubbles) responseBubbles = responseBubbles.children
   else return
@@ -229,7 +264,7 @@ function initResponseBubbles() {
 }
 
 function initConversation() {
-
+  /* Deze functie wordt gebruikt om de feedback en het ingevulde antwoordt te laten zien bij de conversatietraining. */
   var feedback = getFeedback()
   if (feedback) {
     setConversationMessage(feedback.message)
@@ -238,6 +273,7 @@ function initConversation() {
 }
 
 function setConversationMessage(message) {
+  /* Deze functie wordt gebruikt om het ingevulde antwoord te laten zien bij de conversatietraining. */
   try {
     var conversationMessage = document.getElementById('conversationMessage')
     conversationMessage.innerHTML = quote(message);
@@ -246,6 +282,7 @@ function setConversationMessage(message) {
 }
 
 function setConversationFeedback(feedback) {
+  /* Deze functie wordt gebruikt om de feedback te laden. De feedback heeft betrekking op het ingevoerde antwoord bij de conversatietraining. */
   try {
     var conversationFeedback = document.getElementById('conversationFeedback')
     conversationFeedback.innerHTML = feedback;
