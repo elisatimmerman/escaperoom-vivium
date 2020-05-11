@@ -886,6 +886,10 @@ input[type="text"]:last-of-type {
       margin-top: 0;
   }
 
+  #mevrouw-kok-antwoord8 {
+      overflow: scroll;
+  }
+
 .antwoord-uitleg {
     margin: 0;
 } 
@@ -1117,7 +1121,14 @@ input[type="text"]:last-of-type {
     margin: 10px;
     line-height: 40px;
     border: none;
+}
 
+#txtBovendruk1::placeholder {
+    color: #E0DED8;
+}
+
+#invoering-sondedraad-nieuw::placeholder {
+    color: #E0DED8;
 }
 
 .aligner{
