@@ -293,7 +293,7 @@ function setConversationFeedback(feedback) {
 responses = {
   'meneer-dijkstra-antwoord1': {
     'success': false,
-    'message': 'Wij moeten jou in de gaten houden, maar als je dat niet wilt dan gaan we wel weer weg. Weet wel dat we morgen pas weer tijd hebben voor u en dat we ook echt niet van plan zijn eerder te komen.',
+    'message': 'Wij moeten u in de gaten houden, maar als u dat niet wilt dan gaan we wel weer weg. Weet wel dat we morgen pas weer tijd hebben voor u en dat we ook echt niet van plan zijn eerder te komen.',
     'feedback': 'Dit is niet het juiste antwoord. Het is belangrijk voor het monitoren van de toestand van meneer Dijkstra dat je zijn bloeddruk dagelijks meet.',
   },
   'meneer-dijkstra-antwoord2': {
@@ -355,7 +355,7 @@ responses = {
 
   'mevrouw-kok-antwoord1': {
     'success': false,
-    'message': 'Ach meneer, ik merk dat het veel met je doet. Kun je mij uitleggen waarom u het zo vervelend vindt? Waarom doet het advies om mevrouw een sonde te geven zoveel met je? Denkt je niet ook dat het eigenlijk beter is?',
+    'message': 'Ach meneer, ik merk dat het veel met u doet. Kun je mij uitleggen waarom u het zo vervelend vindt? Waarom doet het advies om mevrouw een sonde te geven zoveel met u? Denkt u niet ook dat het eigenlijk beter is?',
     'feedback': 'Dit is niet het juiste antwoord. Door veel vragen te gaan stellen geef je meneer Kok niet de ruimte om zijn emoties te laten zien, maar gaat hij naar jou luisteren. Als je de emoties bij meneer Kok eerst even laat zakken, door hem bijvoorbeeld een glaasje water aan te bieden, gaat hij waarschijnlijk vanzelf vertellen wat er aan de hand is. Als dit niet het geval is kan je altijd nog vragen wat hem zo verdrietig maakt.',
   },
   'mevrouw-kok-antwoord2': {
