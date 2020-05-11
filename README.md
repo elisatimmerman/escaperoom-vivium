@@ -1,24 +1,7 @@
-# escaperoom
+# escaperoom Zorgprofessional+
 
-## Project setup
-```
-npm install
-```
+Deze applicatie is gemaakt voor de escaperoom van Zorgprofessional+ van Vivium. Hierin kunnen studenten die de escaperoom spelen conversatie oefeningen doen. 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Daarnaast bevat de applicatie ook oefening waarbij het essentieel is dat de studeten feedback krijgen op hun antwoorden. Ze hebben dan het gegeven nodig voor een fysieke opdracht in de escaperoom.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Link: http://stijnkamp.com
