@@ -55,10 +55,9 @@ function confirmationButtonClicked() {
   {
     /*Controleer of het gegeven antwoord overeenkomt met het correcte antwoord*/
     awnser = awnsers[i]
-    awnser.textContent = awnser.textContent.replace(' X', '')
     if(correctAwnsers[awnser.id] != awnser.value)
     {
-      awnser.textContent += ' X'
+      awnser.style.backgroundColor = 'red'
       success = false
     }
   }
@@ -146,7 +145,7 @@ function initBloeddruksoort(){
 
 function dragBloeddruk(bloeddrukSoort, lastMove){
   var symptoom = getElementByMouse(lastMove)
-  setSymptoom(symptoom, bloeddrukSoort)
+  if(symptoom.className == 'bloeddruk-antwoord') setSymptoom(symptoom, bloeddrukSoort)
 }
 
 function getElementByMouse(coords){
