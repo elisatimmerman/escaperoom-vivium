@@ -6,17 +6,21 @@ function bloeddrukSymtomsClicked(btnId) {
   * Wanneer dit gebeurd, wordt de value van de knop gerotate. Ook wordt de kleur van de achtergrond aangepast om dit te laten zien.
   */
 
-  // Achtergrondkleuren van bloeddruksymptomen opdracht
-  const achtergronden = [
-    '#00257A',
-    '#009B74'
-  ]
-
   var btn = document.getElementById(btnId);
-  var btnConfirm = document.getElementById('btnConfirm');
-
   btn.value++
-  btn.value = btn.value < achtergronden.length ? btn.value : 0;
+  setSymptoom(btn, btn.value)
+}
+
+function setSymptoom(btn, value)
+{
+    // Achtergrondkleuren van bloeddruksymptomen opdracht
+    const achtergronden = [
+      '#00257A',
+      '#009B74'
+    ]
+  
+  var btnConfirm = document.getElementById('btnConfirm');
+  btn.value = value < achtergronden.length ? value : 0
   btn.style.backgroundColor = achtergronden[btn.value]
   btn.style.color = '#ffffff'
 
@@ -29,8 +33,37 @@ function bloeddrukSymtomsClicked(btnId) {
 }
 
 function confirmationButtonClicked() {
+  const HOOG = 0
+  const LAAG = 1
+  const correctAwnsers = {
+    "btnLichtInHetHoofd":LAAG,
+    "btnDuizeligheid":HOOG,
+    "btnKortademigheid":HOOG,
+    "btnFlauwvallen":LAAG,
+    "btnWazigZien":HOOG,
+    "btnMisselijkheidEnBraken":LAAG,
+    "btnHoofdpijn":HOOG,
+    "btnRusteloosheid":LAAG,
+    "btnVermoeidheid":LAAG
+  }
+  
+  var awnsers = document.getElementById('symptomen').children
+  awnsers = [].slice.call(awnsers)
+  var success = true
+ 
+  for(i in awnsers)
+  {
+    /*Controleer of het gegeven antwoord overeenkomt met het correcte antwoord*/
+    awnser = awnsers[i]
+    awnser.textContent = awnser.textContent.replace(' X', '')
+    if(correctAwnsers[awnser.id] != awnser.value)
+    {
+      awnser.textContent += ' X'
+      success = false
+    }
+  }
   /*De confirmatieknop leidt naar het volgende scherm*/
-  window.location.href = './10-meneer-dijkstra-irrelevant.html'
+  if(success) window.location.href = './10-meneer-dijkstra-irrelevant.html'
 }
 
 function setBloeddruk(Onderdruk, Bovendruk, Soort)
@@ -89,6 +122,40 @@ function initBloeddruk()
   if(Bovendruk && Bloeddruk['Bovendruk']) Bovendruk.value = Bloeddruk['Bovendruk']
 }
 
+function initBloeddruksoort(){
+  var bloeddrukSoorten = document.getElementById('bloeddruk-soorten')
+  let lastMove = null
+  
+  if(bloeddrukSoorten == null) return
+  bloeddrukSoorten = bloeddrukSoorten.children
+
+  var eventListener =  function(){dragBloeddruk(this.bloeddrukSoort, lastMove);}
+
+  for(i  in bloeddrukSoorten)
+  {
+    try {
+      bloeddrukSoorten[i].addEventListener("touchend",eventListener.bind({'bloeddrukSoort': bloeddrukSoorten[i].value, 'lastMove': lastMove}), false);
+      bloeddrukSoorten[i].addEventListener('touchmove', function(event) {
+        lastMove = event.touches[0];
+      });
+    } catch (error) {
+
+    }
+  }
+}
+
+function dragBloeddruk(bloeddrukSoort, lastMove){
+  var symptoom = getElementByMouse(lastMove)
+  setSymptoom(symptoom, bloeddrukSoort)
+}
+
+function getElementByMouse(coords){
+  var x = coords.clientX;     // Get the horizontal coordinate
+  var y = coords.clientY;     // Get the vertical coordinate
+
+  return document.elementFromPoint(x, y);
+}
+
 /*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
 /*eslint-env browser*/
 /*eslint 'no-console':0*/
@@ -105,6 +172,7 @@ window.onload = _ => {
   initResponseBubbles();
   initConversation();
   initBloeddruk();
+  initBloeddruksoort()
   initTimer();
   startvoiceMessage();
 
