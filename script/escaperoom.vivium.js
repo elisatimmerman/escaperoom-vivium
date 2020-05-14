@@ -29,8 +29,38 @@ function bloeddrukSymtomsClicked(btnId) {
 }
 
 function confirmationButtonClicked() {
+  const HOOG = 0
+  const LAAG = 1
+  const correctAwnsers = {
+    "btnLichtInHetHoofd":LAAG,
+    "btnDuizeligheid":HOOG,
+    "btnKortademigheid":HOOG,
+    "btnFlauwvallen":LAAG,
+    "btnWazigZien":HOOG,
+    "btnMisselijkheidEnBraken":LAAG,
+    "btnHoofdpijn":HOOG,
+    "btnRusteloosheid":LAAG,
+    "btnVermoeidheid":LAAG
+  }
+  
+  var awnsers = document.getElementById('symptomen').children
+  awnsers = [].slice.call(awnsers)
+  var success = true
+ 
+  for(i in awnsers)
+  {
+    /*Controleer of het gegeven antwoord overeenkomt met het correcte antwoord*/
+    awnser = awnsers[i]
+    awnser.textContent = awnser.textContent.replace(' X', '')
+    if(correctAwnsers[awnser.id] != awnser.value)
+    {
+      awnser.textContent += ' X'
+      success = false
+    }
+  }
+
   /*De confirmatieknop leidt naar het volgende scherm*/
-  window.location.href = './10-meneer-dijkstra-irrelevant.html'
+  if(success) window.location.href = './10-meneer-dijkstra-irrelevant.html'
 }
 
 function setBloeddruk(Onderdruk, Bovendruk, Soort)
@@ -87,6 +117,29 @@ function initBloeddruk()
   if(Soort[0]) Soort[0].checked = true
   if(Onderdruk && Bloeddruk['Onderdruk']) Onderdruk.value = Bloeddruk['Onderdruk']
   if(Bovendruk && Bloeddruk['Bovendruk']) Bovendruk.value = Bloeddruk['Bovendruk']
+}
+
+function initBloeddruksoort(){
+  var bloeddrukSoorten = document.getElementById('bloeddruk-soorten').children
+  
+  for(i  in bloeddrukSoorten)
+  {
+    bloeddrukSoort = bloeddrukSoorten[i]
+    bloeddrukSoort.addEventListener('ontouchend', function(){ dragBloeddruk(bloeddrukSoort.value)})
+  }
+}
+
+function dragBloeddruk(bloeddrukId){
+  var bloeddrukSoort = getElementById(bloeddrukId).value
+  var symptoom = getElementByMouse()
+
+  symptoom.value = bloeddrukSoort
+  symptoom.backgroundColor = achtergronden[bloeddrukSoort]
+}
+
+function getElementByMouse(){
+  var x = event.clientX, y = event.clientY,
+  return document.elementFromPoint(x, y);
 }
 
 /*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
