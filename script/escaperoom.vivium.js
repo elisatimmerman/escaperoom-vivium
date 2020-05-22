@@ -37,14 +37,14 @@ function confirmationButtonClicked() {
   const LAAG = 1
   const correctAwnsers = {
     "btnLichtInHetHoofd":LAAG,
-    "btnDuizeligheid":HOOG,
+    "btnDuizeligheid":LAAG,
     "btnKortademigheid":HOOG,
     "btnFlauwvallen":LAAG,
     "btnWazigZien":HOOG,
-    "btnMisselijkheidEnBraken":LAAG,
+    "btnMisselijkheidEnBraken":HOOG,
     "btnHoofdpijn":HOOG,
-    "btnRusteloosheid":LAAG,
-    "btnVermoeidheid":LAAG
+    "btnRusteloosheid":HOOG,
+    "btnVermoeidheid":HOOG
   }
   
   var awnsers = document.getElementById('symptomen').children
