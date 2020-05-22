@@ -360,7 +360,7 @@ function setConversationFeedback(feedback) {
 responses = {
   'meneer-dijkstra-antwoord1': {
     'success': false,
-    'message': 'Wij moeten u in de gaten houden, maar als u dat niet wilt dan gaan we wel weer weg. Weet wel dat we morgen pas weer tijd hebben voor u en dat we ook echt niet van plan zijn eerder te komen.',
+    'message': 'Wij moeten jou in de gaten houden, maar als je dat niet wilt dan gaan we wel weer weg. Weet wel dat we morgen pas weer tijd hebben voor u.',
     'feedback': 'Dit is niet het juiste antwoord. Het is belangrijk voor het monitoren van de toestand van meneer Dijkstra dat je zijn bloeddruk dagelijks meet.',
   },
   'meneer-dijkstra-antwoord2': {
@@ -375,13 +375,13 @@ responses = {
   },
   'meneer-dijkstra-antwoord4': {
     'success': true,
-    'message': 'Nee meneer, we moeten heel even uw bloeddruk opmeten, zodat we in de gaten kunnen houden hoe het met u gaat. Het zal niet lang duren, dan kunt u daarna weer verder met uitrusten.',
+    'message': 'Het is belangrijk dat we heel even uw bloeddruk opmeten meneer, zodat we in de gaten kunnen houden hoe het met u gaat. Het zal niet lang duren, dan kunt u daarna weer verder met uitrusten.',
     'feedback': 'Dit is inderdaad het juiste antwoord. Op deze manier leg je meneer Dijkstra uit dat het meten van zijn bloeddruk belangrijk is voor het monitoren van zijn dagelijkse toestand, maar geef je ook aan dat je maar een paar minuten van zijn tijd nodig heeft, zodat hij daarna weer kan rusten.',
   },
 
   'meneer-dijkstra-antwoord5': {
     'success': true,
-    'message': 'Wat goed van uw kleindochter! Ik moet nu verder, maar ik kom vanmiddag als ik tijd heb wel even kijken naar uw filmpje oké?',
+    'message': 'Wat goed van uw kleindochter! Ik moet nu verder, maar ik kom vanmiddag wel even kijken naar uw filmpje oké? Is na mijn lunch goed?',
     'feedback': 'Dit is inderdaad het juiste antwoord. Je toont interesse in iets wat betekenisvol is voor meneer Dijkstra en spreekt gelijk een tijd met hem af. Op deze manier weet meneer Dijkstra dat je langskomt, ondanks dat je nu geen tijd meer hebt.',
   },
   'meneer-dijkstra-antwoord6': {
@@ -411,7 +411,7 @@ responses = {
   },
   'meneer-dijkstra-antwoord11': {
     'success': false,
-    'message': 'We gaan gewoon beginnen.',
+    'message': 'Niks. Je begint gewoon met het verwisselen van de katheter. Het zal toch moeten gebeuren, dat is het protocol.',
     'feedback': 'Dit is niet het juiste antwoord. Door meneer Dijkstra geen uitleg te geven en tegen zijn zin een handeling te starten, zal hij je geen toestemming geven en kan je de katheter niet gaan verwisselen.',
   },
   'meneer-dijkstra-antwoord12': {
@@ -437,7 +437,7 @@ responses = {
   },  
   'mevrouw-kok-antwoord4': {
     'success': false,
-    'message': 'Sorry, ik kom later wel terug',
+    'message': 'Je schuift meneer Kok een doos tissues en een glas water toe, waarna je weg loopt en hem alleen laat.',
     'feedback': 'Dit is niet het juiste antwoord. Je laat meneer Kok nu alleen in zijn verdriet, waardoor je zijn verhaal vermijdt. Hij heeft je juist nodig om zijn emoties en achterliggende verhaal te delen.',
   },
   'mevrouw-kok-antwoord5': {
@@ -447,7 +447,7 @@ responses = {
   },
   'mevrouw-kok-antwoord6': {
     'success': false,
-    'message': 'Ik snap het helemaal meneer Kok, maar de diëtist en logopedist geven niet voor niks dit advies. Ik stuur een van hen vanmiddag wel even langs voor je oké? Dan kunnen zij het er nog een keer met u over hebben.',
+    'message': '“Ik snap het helemaal meneer Kok. Het is ook een belangrijk moment van jullie samen en dat willen we jullie absoluut niet afnemen. Zullen we samen kijken hoe u uw echtgenote toch kan blijven ondersteunen bij de maaltijden? U zou bijvoorbeeld kunnen ondersteunen bij het geven van de sondevoeding. Dit kunnen wij u leren. Denk er maar even over na, dan kom ik na mijn lunch wel weer even langs, oké?',
     'feedback': 'Dit is niet helemaal het juiste antwoord. Probeer niet gelijk te verwijzen naar een diëtist of logopedist. Wat kan je zelf eerst doen om het verdriet van meneer Kok te ondervangen?',
   },  
   'mevrouw-kok-antwoord7': {

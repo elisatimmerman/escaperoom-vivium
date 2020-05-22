@@ -9,6 +9,7 @@ body {
     height: 100vh;
     margin: 0;
     position: relative;
+    font-size: 90%;
 }
 
 html, body {
