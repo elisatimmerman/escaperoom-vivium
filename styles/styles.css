@@ -5,7 +5,6 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 135%;
     padding: 4em;
     height: 100vh;
     margin: 0;
@@ -502,7 +501,7 @@ p {
 }
 
 #img-uitleg {
-    width: 28%;
+    height: 40vh;
     position: absolute;
     bottom: 0;
     left: 15%;
@@ -887,6 +886,10 @@ input[type="text"]:last-of-type {
       margin-top: 0;
   }
 
+  #mevrouw-kok-antwoord8 {
+      overflow: scroll;
+  }
+
 .antwoord-uitleg {
     margin: 0;
 } 
@@ -1118,7 +1121,14 @@ input[type="text"]:last-of-type {
     margin: 10px;
     line-height: 40px;
     border: none;
+}
 
+#txtBovendruk1::placeholder {
+    color: #E0DED8;
+}
+
+#invoering-sondedraad-nieuw::placeholder {
+    color: #E0DED8;
 }
 
 .aligner{
@@ -1135,6 +1145,27 @@ input[type="text"]:last-of-type {
     align-content: space-between;
     height: 70vh;
     display: flex;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    padding: 3px;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+.progress-bar-fill {
+    display: block;
+    height: 22px;
+    background-color: #659cef;
+    border-radius: 3px;
+    
+    transition: width 500ms ease-in-out;
+}
+
+#time{
+    color: red;
 }
 
 @media (min-width: 30em) {
@@ -1294,33 +1325,6 @@ input[type="text"]:last-of-type {
 }
 
 @media (min-width: 80em) {
-    #img-uitleg {
-        width: 20%;
-    }
-}
-
-.progress-bar {
-    width: 100%;
-    background-color: #e0e0e0;
-    padding: 3px;
-    border-radius: 3px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
-}
-
-.progress-bar-fill {
-    display: block;
-    height: 22px;
-    background-color: #659cef;
-    border-radius: 3px;
-    
-    transition: width 500ms ease-in-out;
-}
-
-#time{
-    color: red;
-}
- 
-/* @media (min-width: 80em) {
     h1 {
         font-size: 3.5em;
     }
@@ -1433,11 +1437,6 @@ input[type="text"]:last-of-type {
       font-size: 1.5em;
   }
 
-  .casus-bevestigen {
-      top: 4em;
-      transform: none;
-  }
-
   #portret-groot {
       height: 70vh;
   }
@@ -1447,7 +1446,7 @@ input[type="text"]:last-of-type {
   }
 
   #img-uitleg {
-      width: 18vw;
+      height: 20vh;
   }
 
 
@@ -1466,10 +1465,6 @@ input[type="text"]:last-of-type {
       font-size: 1.25em;
   }
 
-  .toelichting dt {
-      font-size: 1.25em;
-  }
-
   .toelichting dl {
       font-size: 1.25em;
   }
@@ -1494,19 +1489,19 @@ input[type="text"]:last-of-type {
       width: 45%;
   }
 
-}  */
+} 
 
-/* @media (min-width: 110em) {   
+@media (min-width: 110em) {   
     h1 {
         font-size: 4em;
     }
 
     h2 {
-        font-size: 3.5em;
+        font-size: 2.5em;
     }
 
     p {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .kleuren {
@@ -1518,68 +1513,68 @@ input[type="text"]:last-of-type {
     }
 
     .antwoord-textfield > label {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .witte-subheader {
-        font-size: 1.8em
+        font-size: 1.4em;
     }
 
     input[type="text"] {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
     
     .blok-casus p:first-of-type {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     .button-1 {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .button-2 {
         width: 25vw;
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .button-3 {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .button-4 {
         width: 25vw;
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .uitleg .button-1 {
         width: 25vw;
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .terug {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .terug-wit {
-        font-size: 1.8em;
+        font-size: 1.4em;
         left: 3em;
     }
 
     .stop {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .stop-wit {
-        font-size: 1.8em;
+        font-size: 1.4em;
         left: 3em;
     }
 
     .antwoordBubbel1 {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .antwoordBubbel2 {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .antwoordBubbel2 > p {
@@ -1588,19 +1583,19 @@ input[type="text"]:last-of-type {
     }
 
     .antwoordBubbel3 {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .antwoordBubbel4 {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .antwoordBubbel5 {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .antwoordBubbel6 {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .casussen {
@@ -1611,12 +1606,7 @@ input[type="text"]:last-of-type {
     }
 
   blok-casus p:first-of-type {
-      font-size: 1.5em;
-  }
-
-  .casus-bevestigen {
-      top: 4em;
-      transform: none;
+      font-size: 1.4em;
   }
 
   #portret-groot {
@@ -1625,31 +1615,26 @@ input[type="text"]:last-of-type {
 
   #img-uitleg {
       height: 40vh;
-      width: 20vw;
   }
 
 
   .bloeddruk-vraag h2 {
-    margin-top: 1.8em;
+    margin-top: 1.4em;
 }
 
   .bloeddruk-vraag label {
-      font-size: 1.8em;
+      font-size: 1.4em;
   }
 
   .antwoord-bovendruk > label {
-      font-size: 1.8em;
+      font-size: 1.4em;
   }
   .antwoord-onderdruk > label {
-      font-size: 1.8em;
-  }
-
-  .toelichting dt {
-      font-size: 1.8em;
+      font-size: 1.4em;
   }
 
   .toelichting dl {
-      font-size: 1.8em;
+      font-size: 1.4em;
   }
 
   .grid-container-toelichting {
@@ -1661,7 +1646,7 @@ input[type="text"]:last-of-type {
   }
 
   .bloeddruk-antwoord {
-      font-size: 1.8em;
+      font-size: 1.4em;
   }
 
   .aligner-antwoorden {
@@ -1672,4 +1657,4 @@ input[type="text"]:last-of-type {
       width: 45%;
   }
 
-} */
+} 

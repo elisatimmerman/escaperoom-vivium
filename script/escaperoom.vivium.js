@@ -120,6 +120,34 @@ function initBloeddruk()
   if(Soort[0]) Soort[0].checked = true
   if(Onderdruk && Bloeddruk['Onderdruk']) Onderdruk.value = Bloeddruk['Onderdruk']
   if(Bovendruk && Bloeddruk['Bovendruk']) Bovendruk.value = Bloeddruk['Bovendruk']
+
+  var success
+  switch( Bloeddruk['Soort']) {
+    case 'hoog':
+      if(Bloeddruk['Onderdruk'] > 90 && Bloeddruk['Bovendruk'] > 140) success = true
+      else success = false
+      break;
+    case 'laag':
+      if(Bloeddruk['Onderdruk'] < 70 && Bloeddruk['Bovendruk'] < 110) success = true
+      else success = false
+        break;
+    case 'normaal':
+      if(Bloeddruk['Onderdruk'] > 70 && Bloeddruk['Bovendruk'] > 110 && Bloeddruk['Onderdruk'] < 90 && Bloeddruk['Bovendruk'] < 140) success = true
+      else success = false
+      break;
+    default:
+      // code block
+  } 
+
+  var toelichting = document.getElementById('toelichting')
+  if(toelichting)
+  {
+    if(!success)
+    {
+      toelichting.innerHTML = 'Helaas, het gekozen antwoord is niet goed. Zie hiernaast de toelichting voor meer informatie.'
+    }
+  }
+
 }
 
 function initBloeddruksoort(){
