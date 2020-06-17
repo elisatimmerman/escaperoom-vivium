@@ -252,7 +252,7 @@ function startTimer(duration, display) {
   //Hiermee wordt de timer gestart waardoor de gebruiker weet wanneer er wordt doorverwezen naar de volgende pagina
   var timer = duration, minutes, seconds;
   setInterval(function () {
-      minutes = parseInt(timer / 60, 10)
+      minutes = parseInt(timer / 60, 10);
       seconds = parseInt(timer % 60, 10);
 
       minutes = minutes < 10 ? "0" + minutes : minutes;
